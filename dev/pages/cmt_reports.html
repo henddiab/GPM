@@ -1,0 +1,152 @@
+{% extends "cmt_layout.html" %} {% set title = 'التقارير' %} {% block content %}
+
+<div class="main-content legan" id="mainContent">
+    <div class="charts_container">
+        <div class="row">
+            <div class="col-7">
+                <div class="chart-wrapper p-0">
+                    <div class="border-gray px-3">
+                        <p class="sub-title">حالة و نوع اللجنة</p>
+                    </div>
+                    <div id="report2" data-chart='[{
+                        "name": "قائم",
+                        "data": [5, 3, 4, 7],
+                        "color": "#1BAA76"
+                    }, {
+                        "name": "تم الضم",
+                        "data": [2, 2, 3, 2],
+                        "color": "#7776BC"
+                    }, {
+                        "name": "متوقف",
+                        "data": [3, 4, 4, 2],
+                        "color": "#fbb040"
+                    }, {
+                        "name": "اغلق",
+                        "data": [3, 4, 4, 2],
+                        "color": "#C8F0D7"
+                    }, {
+                        "name": "الغي",
+                        "data": [3, 4, 4, 2],
+                        "color": "#FA6565"
+                    }]' style="height:300px"></div>
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="chart-wrapper p-0">
+                    <div class="border-gray px-3">
+                        <p class="sub-title">نوع اللجنة</p>
+                    </div>
+                    <div id="report1" data-chart='[{"name": "أخري","y": 20,"color":"#0C66E1"},{"name": "لجان خبراء","y": 25,"color":"#7776BC"},{"name": "لجان مجالس", "y": 15,"color":"#A9CDFF"},{"name": "لجان وزارية", "y": 40,"color":"#5BB1F8"}]' style="height:300px"></div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="chart-wrapper p-0">
+                    <div class="border-gray px-3 d-flex justify-content-between ptsm">
+                        <p class="sub-title m-0">اللجان</p>
+                        <div class="d-flex">
+                            <div class="select-wrapper ml-3">
+                                <select name="" class="form-control">
+                                    <option>جميع المهام
+                                    </option>
+                                    <option>مهام لجان
+                                    </option>
+                                    <option>مهام اجتماعات
+                                    </option>
+                                    <option>مهام تكليفات
+                                    </option>
+                                    <option>قيد الانشاء
+                                    </option>
+                                    <option>مهام مشاريع
+                                    </option>
+                                    <option>مهام افادات
+                                    </option>
+                                    <option>مهام تقرير الاجتماعات
+                                    </option>
+                                    <option>مهام ارفاق ملفات
+                                    </option>
+                                    <option>مهام التعليقات
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="select-wrapper">
+                                <select name="" class="form-control">
+                                    <option>جميع اللجان
+                                    </option>
+                                    <option>لجان وزارية
+                                    </option>
+                                    <option>لجان هيئة خبراء
+                                    </option>
+                                    <option>لجان مجالس
+                                    </option>
+                                    <option>لجان أخري
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive mtmd">
+                        <table class="js-datatable table table-striped table-borderless table-hover">
+                            <thead>
+                                <tr>
+                                    <th>اسم اللجنة</th>
+                                    <th>الوصف</th>
+                                    <th>تصنيف اللجنة</th>
+                                    <th>مصدر اللجنة</th>
+                                    <th>حالة اللجنة</th>
+                                    <th>مدة اللجنة</th>
+                                    <th>نوع اللجنة</th>
+                                    <th>تاريخ البدء</th>
+                                    <th>تاريخ الانتهاء</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>لجنة التحول الوطنى</td>
+                                    <td>لجنة التحول الوطنى</td>
+                                    <td>لجنة دولية</td>
+                                    <td>مجلس الشئون</td>
+                                    <td> <span class="leg-status yellow"></span> لم تبدأ
+                                    </td>
+                                    <td>قائمة</td>
+                                    <td>لجنة خبراء</td>
+                                    <td>12/2/1441</td>
+                                    <td>12/2/1441</td>
+                                </tr>
+
+                                <tr>
+                                    <td>لجنة التحول الوطنى</td>
+                                    <td>لجنة التحول الوطنى</td>
+                                    <td>لجنة دولية</td>
+                                    <td>مجلس الشئون</td>
+                                    <td> <span class="leg-status orange"></span>متوقف
+                                    </td>
+                                    <td>قائمة</td>
+                                    <td>لجنة خبراء</td>
+                                    <td>12/2/1441</td>
+                                    <td>12/2/1441</td>
+                                </tr>
+
+                                <tr>
+                                    <td>لجنة التحول الوطنى</td>
+                                    <td>لجنة التحول الوطنى</td>
+                                    <td>لجنة دولية</td>
+                                    <td>مجلس الشئون</td>
+                                    <td> <span class="leg-status green"></span>قائم
+                                    </td>
+                                    <td>قائمة</td>
+                                    <td>لجنة خبراء</td>
+                                    <td>12/2/1441</td>
+                                    <td>12/2/1441</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

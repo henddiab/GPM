@@ -1,0 +1,74 @@
+.calendars {
+    border: 1px solid var(--borderColor);
+    color: var(--textColor);
+}
+
+.calendars-nav {
+    background-color: #fafafa;
+    color: var(--primaryColor);
+}
+
+.calendars-nav>a {
+    color: var(--primaryColor);
+}
+
+.calendars-month {
+    border: 1px solid var(--borderColor);
+}
+
+.calendars-month-header {
+    display: flex;
+    align-items: center;
+}
+
+.calendars-month-year {
+    flex: 1;
+    height: 100%;
+}
+
+.calendars-month-header,
+.calendars-month-header select,
+.calendars-month-header input {
+    background-color: var(--primaryColor);
+}
+
+.calendars-month th,
+.calendars-month th a {
+    background-color: #FFF;
+    color: var(--textColor);
+}
+
+.calendars-month th,
+.calendars-month td {
+    background-color: #eee;
+    border: 0;
+}
+
+.calendars-month td .calendars-highlight,
+.calendars-month td .calendars-selected {
+    background-color: var(--primaryColor);
+    color: #FFF;
+}
+
+.calendars-month td .calendars-today {
+    background-color: var(--textColor);
+    color: #FFF;
+}
+
+.calendars-month thead {
+    border-bottom-color: var(--borderColor);
+}
+
+.calendars-ctrl {
+    background-color: #fafafa;
+    color: var(--primaryColor);
+}
+
+.calendars-ctrl a {
+    color: var(--primaryColor);
+}
+
+.calendars-ctrl a:hover,
+.calendars-ctrl a:focus {
+    color: var(--darkPrimaryColor);
+}

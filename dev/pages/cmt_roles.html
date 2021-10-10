@@ -1,0 +1,311 @@
+{% extends "cmt_layout.html" %} {% set title = 'الادوار' %} {% block content %}
+
+<div class="main-content legan" id="mainContent">
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xs">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <div>
+                        <i class="far fa-trash-alt"></i>
+                    </div>
+                    <h2 class="title" id="exampleModalLabel">هل تريد ازالة العنصر؟</h2>
+                    <p>عند ازالة العنصر لا يمكن استعادته مرة اخري
+                    </p>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="button" class="btn btn-wide btn-primary" data-dismiss="modal">نعم</button>
+                    <button type="button" class="btn btn-wide btn-primary-reverse" data-dismiss="modal">لا</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mtlg">
+        <div class="row mx-0">
+            <div class="mtlg col-12">
+                <div class="row mx-0">
+                    <div class="col-12 p-0">
+                        <div class="d-flex justify-content-between mbmd">
+                            <p class="title m-0">ادوار المستخدمين و صلاحياتهم</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 p-0">
+                        <div class="table-responsive members">
+                            <table class="js-datatable table table-striped table-borderless table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>اسم العضو</th>
+                                        <th>الدور</th>
+                                        <th>الخطوة</th>
+                                        <th>اضافة</th>
+                                        <th>عرض</th>
+                                        <th>تحميل</th>
+                                        <th>تحديث</th>
+                                        <th>ازالة</th>
+                                        <th>طباعة</th>
+                                        <th>تاريخ الانشاء</th>
+                                        <th>اجراءات</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>احمد سليمان</td>
+                                        <td>
+                                            <div class="select-wrapper">
+                                                <select name="" class="form-control bg-transparent border-0" id="">
+                                                    <option>وكيل وزارة
+                                                    </option>
+                                                    <option>نائب وكيل وزارة
+                                                    </option>
+                                                    <option>مستشار المعالي
+                                                    </option>
+                                                    <option>اخصائي اللجنة
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="select-wrapper">
+                                                <select name="" class="form-control bg-transparent border-0" id="">
+                                                    <option>الانشاء
+                                                    </option>
+                                                    <option>التطوير
+                                                    </option>
+                                                    <option>التنمية البشرية
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <input type="checkbox" checked name="ch1" id="ch1" class="styled-checkbox">
+
+                                                <label for="ch1"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <input type="checkbox" checked name="ch2" id="ch2" class="styled-checkbox">
+
+                                                <label for="ch2"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <input type="checkbox" name="ch3" id="ch3" class="styled-checkbox">
+
+                                                <label for="ch3"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <input type="checkbox" checked name="ch4" id="ch4" class="styled-checkbox">
+
+                                                <label for="ch4"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <input type="checkbox" name="ch5" id="ch5" class="styled-checkbox">
+
+                                                <label for="ch5"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <input type="checkbox" checked name="ch6" id="ch6" class="styled-checkbox">
+
+                                                <label for="ch6"></label>
+                                            </div>
+                                        </td>
+                                        <td>1441/8/23
+                                        </td>
+                                        <td>
+                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                <i class="far fa-trash-alt"></i>
+                                            </button>
+
+                                            <button>
+                                                <i class="far fa-edit"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>احمد سليمان</td>
+                                        <td>
+                                            <div class="select-wrapper">
+                                                <select name="" class="form-control bg-transparent border-0" id="">
+                                                    <option>وكيل وزارة
+                                                    </option>
+                                                    <option>نائب وكيل وزارة
+                                                    </option>
+                                                    <option>مستشار المعالي
+                                                    </option>
+                                                    <option>اخصائي اللجنة
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="select-wrapper">
+                                                <select name="" class="form-control bg-transparent border-0" id="">
+                                                    <option>الانشاء
+                                                    </option>
+                                                    <option>التطوير
+                                                    </option>
+                                                    <option>التنمية البشرية
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <input type="checkbox" checked name="ch11" id="ch11" class="styled-checkbox">
+
+                                                <label for="ch11"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <input type="checkbox" checked name="ch21" id="ch21" class="styled-checkbox">
+
+                                                <label for="ch21"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <input type="checkbox" name="ch31" id="ch31" class="styled-checkbox">
+
+                                                <label for="ch31"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <input type="checkbox" checked name="ch41" id="ch41" class="styled-checkbox">
+
+                                                <label for="ch41"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <input type="checkbox" name="ch51" id="ch51" class="styled-checkbox">
+
+                                                <label for="ch51"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <input type="checkbox" checked name="ch61" id="ch61" class="styled-checkbox">
+
+                                                <label for="ch61"></label>
+                                            </div>
+                                        </td>
+                                        <td>1441/8/23
+                                        </td>
+                                        <td>
+                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                <i class="far fa-trash-alt"></i>
+                                            </button>
+
+                                            <button>
+                                                <i class="far fa-edit"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>احمد سليمان</td>
+                                        <td>
+                                            <div class="select-wrapper">
+                                                <select name="" class="form-control bg-transparent border-0" id="">
+                                                    <option>وكيل وزارة
+                                                    </option>
+                                                    <option>نائب وكيل وزارة
+                                                    </option>
+                                                    <option>مستشار المعالي
+                                                    </option>
+                                                    <option>اخصائي اللجنة
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="select-wrapper">
+                                                <select name="" class="form-control bg-transparent border-0" id="">
+                                                    <option>الانشاء
+                                                    </option>
+                                                    <option>التطوير
+                                                    </option>
+                                                    <option>التنمية البشرية
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <input type="checkbox" checked name="ch12" id="ch12" class="styled-checkbox">
+
+                                                <label for="ch12"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <input type="checkbox" checked name="ch22" id="ch22" class="styled-checkbox">
+
+                                                <label for="ch22"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <input type="checkbox" name="ch33" id="ch33" class="styled-checkbox">
+
+                                                <label for="ch33"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <input type="checkbox" checked name="ch44" id="ch44" class="styled-checkbox">
+
+                                                <label for="ch44"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <input type="checkbox" name="ch55" id="ch55" class="styled-checkbox">
+
+                                                <label for="ch55"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <input type="checkbox" checked name="ch66" id="ch66" class="styled-checkbox">
+
+                                                <label for="ch66"></label>
+                                            </div>
+                                        </td>
+                                        <td>1441/8/23
+                                        </td>
+                                        <td>
+                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                <i class="far fa-trash-alt"></i>
+                                            </button>
+
+                                            <button>
+                                                <i class="far fa-edit"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

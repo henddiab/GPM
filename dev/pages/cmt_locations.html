@@ -1,0 +1,269 @@
+{% extends "cmt_layout.html" %} {% set title = 'المقرات' %} {% block content %}
+
+<div class="main-content legan" id="mainContent">
+
+    <div class="container-fluid">
+        <div class="row mx-0 mtlg">
+            <div class="col-12 p-0">
+                <div class="accordion">
+                    <div class="card">
+                        <div class="d-flex flex-row">
+                            <div class="card-header w-50 p-0" id="tab-heading1">
+                                <h2>
+                                    <button type="button" data-toggle="collapse" data-target="#tab-collapseA" aria-expanded="true" aria-controls="tab1-collapse1"></button>
+                                    <div class="title-wrapper prsm plsm">
+                                        <h1 class="title"> اضافة/تعديل مقر
+                                        </h1>
+                                    </div>
+                                </h2>
+                            </div>
+                        </div>
+
+                        <div id="tab-collapseA" class="collapse show" aria-labelledby="tab-heading1">
+                            <div class="card-body">
+                                <div class="row  mx-0">
+                                    <div class="col-4 p-0">
+                                        <p class="sub-title">بيانات المقر
+                                        </p>
+
+                                        <div class="w-100">
+                                            <div><label for="" class="col-form-label">
+                                                    اسم المقر:
+                                                    <span class="required">*</span>
+                                                </label>
+                                            </div>
+                                            <div class="input pb-2">
+                                                <input type="text" name="" class="form-control" placeholder="اسم المقر">
+                                            </div>
+                                        </div>
+
+                                        <div class="w-100">
+                                            <div><label for="" class="col-form-label">
+                                                    عنوان المقر:
+                                                    <span class="required">*</span>
+                                                </label>
+                                            </div>
+                                            <div class="input pb-2">
+                                                <textarea placeholder="عنوان المقر" name="" class="form-control" rows="2"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <p class="sub-title">
+                                            المواصفات
+                                        </p>
+
+                                        <div class="w-100">
+                                            <div><label for="" class="col-form-label">
+                                                    مرفقات المقر:
+                                                </label>
+                                            </div>
+                                            <div class="check-container bg-white p-2">
+                                                <div class="d-flex py-1">
+                                                    <div class="w-50">
+                                                        <input type="checkbox" name="check1" id="check1" class="styled-checkbox">
+
+                                                        <label for="check1"></label> شاشة عرض
+                                                    </div>
+
+                                                    <div class="w-50">
+                                                        <input type="checkbox" name="check2" id="check2" class="styled-checkbox">
+
+                                                        <label for="check2"></label> انترنت لاسلكي
+                                                    </div>
+                                                </div>
+
+                                                <div class="d-flex py-1">
+                                                    <div class="w-50">
+                                                        <input type="checkbox" name="check3" id="check3" class="styled-checkbox">
+
+                                                        <label for="check3"></label> سبورة
+                                                    </div>
+
+                                                    <div class="w-50">
+                                                        <input type="checkbox" name="check4" id="check4" class="styled-checkbox">
+
+                                                        <label for="check4"></label> عزل الصوت
+                                                    </div>
+                                                </div>
+
+                                                <div class="d-flex py-1">
+                                                    <div class="w-50">
+                                                        <input type="checkbox" name="check5" id="check5" class="styled-checkbox">
+
+                                                        <label for="check5"></label> مؤتمر عبر الفيديو
+                                                    </div>
+
+                                                    <div class="w-50">
+                                                        <input type="checkbox" name="check6" id="check6" class="styled-checkbox">
+
+                                                        <label for="check6"></label> طاولة دائرية
+                                                    </div>
+                                                </div>
+
+                                                <div class="d-flex py-1">
+
+                                                    <div class="w-50">
+                                                        <input type="checkbox" name="check7" id="check7" class="styled-checkbox">
+
+                                                        <label for="check7"></label> انتظار سيارات
+                                                    </div>
+
+                                                    <div class="w-50">
+                                                        <input type="checkbox" name="check8" id="check8" class="styled-checkbox">
+
+                                                        <label for="check8"></label> مسرح
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="w-50">
+                                                    <input type="checkbox" name="check9" id="check9" class="styled-checkbox">
+
+                                                    <label for="check9"></label> صالة كبيرة
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="w-100">
+                                            <div><label for="" class="col-form-label">
+                                                    قيد المقر:
+                                                </label>
+                                            </div>
+                                            <div class="check-container bg-white p-2">
+                                                <div class="d-flex py-1">
+                                                    <div class="w-50">
+                                                        <input type="checkbox" name="check11" id="check11" class="styled-checkbox">
+
+                                                        <label for="check11"></label> حجز مسبق
+                                                    </div>
+
+                                                    <div class="w-510">
+                                                        <input type="checkbox" name="check21" id="check21" class="styled-checkbox">
+
+                                                        <label for="check21"></label> مدفوع الاجر
+                                                    </div>
+                                                </div>
+
+                                                <div class="d-flex py-1">
+                                                    <div class="w-50">
+                                                        <input type="checkbox" name="check3" id="check3" class="styled-checkbox">
+
+                                                        <label for="check3"></label> خصوصية محدودة
+                                                    </div>
+
+                                                    <div class="w-50">
+                                                        <input type="checkbox" name="check41" id="check41" class="styled-checkbox">
+
+                                                        <label for="check41"></label> بدون تأمين
+                                                    </div>
+                                                </div>
+
+                                                <div class="w-50">
+                                                    <input type="checkbox" name="check51" id="check51" class="styled-checkbox">
+
+                                                    <label for="check51"></label> بدون حراسة
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-8 p-0">
+                                        <div id="map">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-left mtlg">
+                                    <button class="btn btn-primary btn btn-wide">
+                                        حفظ
+                                    </button>
+                                    <button class="btn btn-gray btn btn-wide">
+                                        الغاء
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 p-0">
+                <div class="table-responsive mtmd">
+                    <p class="sub-title">اماكن الاجتماعات</p>
+                    <table class="meeting js-datatable table table-striped table-borderless table-hover">
+                        <thead>
+                            <tr>
+                                <th>الوصف</th>
+                                <th>العنوان</th>
+                                <th>مرفق مقر</th>
+                                <th>قيد مقر
+                                </th>
+                                <th>تاريخ الانشاء</th>
+                                <th>اجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>مقر الاجتماع رقم 1</td>
+                                <td>الرياض، فندق أبيس الدور الأول قاعة المناسبات الدور الأول صالة رقم 4
+                                    <td>شاشة عرض, انترنت لاسكلكي</td>
+                                </td>
+                                <td> طاولة دائرية - شاشة عرض بدون تأمين - حجز مسبق
+                                </td>
+                                <td>1441/2/12
+                                </td>
+                                <td> <button data-toggle="modal" data-target="#staticBackdrop">
+                                        <i class="far fa-trash-alt"></i>
+                                    </button>
+                                    <button>
+                                        <i class="far fa-edit"></i>
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>مقر الاجتماع رقم 1</td>
+                                <td>الرياض، فندق أبيس الدور الأول قاعة المناسبات الدور الأول صالة رقم 4
+                                    <td>شاشة عرض, انترنت لاسكلكي</td>
+                                </td>
+                                <td> طاولة دائرية - شاشة عرض بدون تأمين - حجز مسبق
+                                </td>
+                                <td>1441/2/12
+                                </td>
+                                <td> <button data-toggle="modal" data-target="#staticBackdrop">
+                                        <i class="far fa-trash-alt"></i>
+                                    </button>
+                                    <button>
+                                        <i class="far fa-edit"></i>
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>مقر الاجتماع رقم 1</td>
+                                <td>الرياض، فندق أبيس الدور الأول قاعة المناسبات الدور الأول صالة رقم 4
+                                    <td>شاشة عرض, انترنت لاسكلكي</td>
+                                </td>
+                                <td> طاولة دائرية - شاشة عرض بدون تأمين - حجز مسبق
+                                </td>
+                                <td>1441/2/12
+                                </td>
+                                <td> <button data-toggle="modal" data-target="#staticBackdrop">
+                                        <i class="far fa-trash-alt"></i>
+                                    </button>
+                                    <button>
+                                        <i class="far fa-edit"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock content %}

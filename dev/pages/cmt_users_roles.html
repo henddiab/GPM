@@ -1,0 +1,212 @@
+{% extends "cmt_layout.html" %} {% set title = 'ادوار المستخدمين' %} {% block content %}
+
+<div class="main-content legan" id="mainContent">
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xs">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <div>
+                        <i class="far fa-trash-alt"></i>
+                    </div>
+                    <h2 class="title" id="exampleModalLabel">هل تريد ازالة العنصر؟</h2>
+                    <p>عند ازالة العنصر لا يمكن استعادته مرة اخري
+                    </p>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="button" class="btn btn-wide btn-primary" data-dismiss="modal">نعم</button>
+                    <button type="button" class="btn btn-wide btn-primary-reverse" data-dismiss="modal">لا</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mtlg">
+        <div class="row mx-0">
+            <div class="mtlg col-12">
+                <div class="row mx-0">
+                    <div class="col-12 p-0">
+                        <div id="add_role">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="row  mx-0">
+                                        <div class="col-12 mtmd  d-flex justify-content-between">
+                                            <p class="title m-0">
+                                                اضافة دور
+                                            </p>
+                                            <button class="btn btn-primary btn-wide pressed">اضافة
+                                                دور</button>
+                                        </div>
+
+                                        <div class="col-11 mtmd">
+                                            <p class="sub-title m-0">
+                                                بيانات الدور
+                                            </p>
+                                        </div>
+
+                                        <div class="col-6">
+                                            <div><label for="" class="col-form-label">
+                                                    اسم الدور:
+                                                    <span>*</span>
+                                                </label>
+                                            </div>
+
+                                            <input type="text" name="" class="form-control" placeholder="اسم الدور">
+                                        </div>
+
+                                        <div class="col-2">
+                                            <div><label for="" class="col-form-label">
+                                                    الاهمية:
+                                                    <span>*</span>
+                                                </label>
+                                            </div>
+
+                                            <div class="select-wrapper">
+                                                <select name="" class="form-control">
+                                                    <option>عادية
+                                                    </option>
+                                                    <option>هام
+                                                    </option>
+                                                    <option>هام جدا
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <div><label for="" class="col-form-label">
+                                                    الدرجة:
+                                                    <span>*</span>
+                                                </label>
+                                            </div>
+
+                                            <div class="select-wrapper">
+                                                <select name="" class="form-control">
+                                                    <option>معالي
+                                                    </option>
+                                                    <option>مستشار المعالي
+                                                    </option>
+                                                    <option>نائب مستشار المعالي
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-10">
+                                            <div><label for="" class="col-form-label">
+                                                    الوصف:
+                                                    <span>*</span>
+                                                </label>
+                                            </div>
+
+                                            <input type="text" name="" class="form-control" placeholder="الوصف">
+                                        </div>
+                                    </div>
+                                    <div class="row mtlg mx-0">
+                                        <div class="col-10 text-left">
+                                            <button class="btn btn-gray btn-wide close_role">الغاء</button>
+                                            <button class="btn btn-primary btn-wide">اضافة</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 p-0">
+                        <div class="d-flex justify-content-between mbmd">
+                            <p class="title m-0">ادوار المستخدمين</p>
+                            <div class="d-flex">
+                                <a class="btn btn-primary btn-wide add_role mrmd" href="#add_role">اضافة
+                                    دور</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 p-0">
+                        <div class="table-responsive members">
+                            <table class="js-datatable table table-striped table-borderless table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="w-25">اسم الدور</th>
+                                        <th class="w-25">الدرجة</th>
+                                        <th class="w-25">الوصف</th>
+                                        <th>الاهمية</th>
+                                        <th>تاريخ الانشاء</th>
+                                        <th>اجراءات</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>وكيل وزارة
+                                        </td>
+                                        <td>معالي
+                                        </td>
+                                        <td>-
+                                        </td>
+                                        <td>عالي</td>
+                                        <td>1441/8/23
+                                        </td>
+                                        <td>
+                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                <i class="far fa-trash-alt"></i>
+                                            </button>
+
+                                            <button>
+                                                <i class="far fa-edit"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>وكيل وزارة
+                                        </td>
+                                        <td>معالي
+                                        </td>
+                                        <td>-
+                                        </td>
+                                        <td>عالي</td>
+                                        <td>1441/8/23
+                                        </td>
+                                        <td>
+                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                <i class="far fa-trash-alt"></i>
+                                            </button>
+
+                                            <button>
+                                                <i class="far fa-edit"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>وكيل وزارة
+                                        </td>
+                                        <td>معالي
+                                        </td>
+                                        <td>-
+                                        </td>
+                                        <td>عالي</td>
+                                        <td>1441/8/23
+                                        </td>
+                                        <td>
+                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                <i class="far fa-trash-alt"></i>
+                                            </button>
+
+                                            <button>
+                                                <i class="far fa-edit"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

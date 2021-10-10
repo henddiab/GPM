@@ -1,0 +1,495 @@
+{% extends "cmt_layout.html" %} {% set title = 'الأعضاء' %} {% block content %}
+
+<div class="main-content legan" id="mainContent">
+
+    <div class="container-fluid">
+
+        <div class="mtlg">
+            <div class="row position-relative mx-0">
+                <div class="col-12 added-new-member">
+                    <div class="text-left">
+                        <button class="btn btn-primary btn-wide pressed">اضافة
+                            عضو جديد</button>
+                    </div>
+
+                    <p class="title mbmd">اضافة عضو</p>
+                    <div class="w-75 ">
+                        <div class="w-100">
+                            <p class="sub-title m-0">بيانات شخصية</p>
+                            <div class="d-flex">
+                                <div class="w-50 ml-4">
+                                    <div><label for="" class="col-form-label">
+                                            اسم
+                                            العضو: <span class="required">*</span></label>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <select name="" class="form-control">
+                                            <option>عمر سليمان
+                                            </option>
+                                            <option>عمر محمد
+                                            </option>
+                                            <option>مصطفي سليمان
+                                            </option>
+                                            <option>مصطفي اسماعيل
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="w-50">
+                                    <div><label for="" class="col-form-label">الجوال:
+                                            <span class="required">*</span></label>
+                                    </div>
+                                    <input type="text" name="" class="form-control" placeholder="02132345645465">
+                                </div>
+
+                            </div>
+                            <div class="d-flex">
+                                <div class="w-50 ml-4">
+                                    <div><label for="" class="col-form-label">
+                                            البريد
+                                            الالكتروني: <span class="required">*</span></label>
+                                    </div>
+                                    <input type="text" name="" class="form-control" placeholder="g@gmail.com">
+                                </div>
+
+                                <div class="w-50">
+                                    <div><label for="" class="col-form-label">النوع:
+                                            <span class="required">*</span></label>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <select name="" class="form-control">
+                                            <option>ذكر</option>
+                                            <option>انثي</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-100">
+                            <p class="sub-title m-0">بيانات خاصة</p>
+                            <div class="d-flex">
+                                <div class="w-50 ml-4">
+                                    <div><label for="" class="col-form-label">
+                                            اسم
+                                            الجهة: <span class="required">*</span></label>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <select name="" class="form-control">
+                                            <option>وزارة</option>
+                                            <option>ادارة</option>
+                                            <option>وكالة</option>
+                                            <option>مجلس منطقة</option>
+                                            <option>هيئة تطوير منطقة</option>
+                                            <option>جهة شقيقة</option>
+                                            <option>هيئة خبراء</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="w-50">
+                                    <div><label for="" class="col-form-label">الدور:
+                                            <span class="required">*</span></label>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <select name="" class="form-control">
+                                            <option>نائب وزارة</option>
+                                            <option>مساعد وزير</option>
+                                            <option>عضو</option>
+                                            <option>عضو مجلس ادارة</option>
+                                            <option>بدون</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="d-flex">
+                                <div class="w-50 ml-4">
+                                    <div><label for="" class="col-form-label">
+                                            درجة المشاركة: <span class="required">*</span></label>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <select name="" class="form-control">
+                                            <option>رئيس لجنة</option>
+                                            <option>أمين لجنة</option>
+                                            <option>عضو لجنة</option>
+                                            <option>ممثل وزارة</option>
+                                            <option>ادارة قانونية</option>
+                                            <option>منسق محتوي</option>
+                                            <option>بدون دور</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="w-50">
+                                    <div><label for="" class="col-form-label">SSO Link:
+                                            <span class="required">*</span></label>
+                                    </div>
+                                    <input type="text" name="" class="form-control" placeholder="The link from AD">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-100">
+                            <p class="sub-title m-0">بيانات المشرف</p>
+                            <div class="d-flex">
+                                <div class="w-50 ml-4">
+                                    <div><label for="" class="col-form-label">
+                                            الاسم: <span class="required">*</span></label>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <select name="" class="form-control">
+
+                                            <option>عمر سليمان
+                                            </option>
+                                            <option>عمر محمد
+                                            </option>
+                                            <option>مصطفي سليمان
+                                            </option>
+                                            <option>مصطفي اسماعيل
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="w-50">
+                                    <div><label for="" class="col-form-label">البريد
+                                            الالكتروني:
+                                            <span class="required">*</span></label>
+                                    </div>
+                                    <input type="text" name="" class="form-control" placeholder="a@gmail.com">
+                                </div>
+
+                            </div>
+                            <div class="d-flex">
+                                <div class="w-50">
+                                    <div><label for="" class="col-form-label">الجوال:
+                                            <span class="required">*</span></label>
+                                    </div>
+                                    <input type="text" name="" class="form-control" placeholder="01001225893">
+                                </div>
+                            </div>
+
+                            <div class="w-100">
+                                <div><label for="" class="col-form-label">تنبيه:
+                                        <span class="required">*</span></label>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="d-flx mllg">
+                                        <input type="checkbox" name="ch10" id="ch10" class="show-members styled-checkbox">
+
+                                        <label for="ch10"></label>
+
+                                        <span>النظام</span>
+                                    </div>
+                                    <div class="d-flx mllg">
+                                        <input type="checkbox" name="ch11" id="ch11" class="show-members styled-checkbox">
+
+                                        <label for="ch11"></label>
+
+                                        <span>البريد الالكتروني</span>
+                                    </div>
+                                    <div class="d-flx mllg">
+                                        <input type="checkbox" name="ch12" id="ch12" class="show-members styled-checkbox">
+
+                                        <label for="ch12"></label>
+
+                                        <span>رسائل نصية</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-100">
+                            <p class="sub-title">
+                                ارفاق الملفات
+                            </p>
+                            <div id="fileinputWrap">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="file file-link">
+                                            <div class="file-link-inner d-flex">
+                                                <div class="w-75 position-relative text-center">
+                                                    <p> drag & drop your files here or
+                                                    </p>
+                                                    <div class="fileinputWrap">
+                                                        <span class="btn btn-gray fileinput-button">
+                                                            <span>choose
+                                                                file</span>
+                                                        <input type="file" data-allowed=" jpg,pdf,doc,docx,rtf" name="files" multiple>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="w-25">
+                                                    <i class="fas fa-folder-open fa-4x"></i>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fileList row"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-75 text-left mtlg">
+                        <button class="btn btn-gray btn-wide close-new-member">الغاء</button>
+                        <button class="btn btn-primary btn-wide">اضافة</button>
+                    </div>
+                </div>
+
+
+                <div class="col-12 p-0">
+                    <div class="d-flex justify-content-between mbmd">
+                        <p class="title m-0">الاعضاء</p>
+                        <div class="d-flex members">
+                            <div class="Icon position-relative">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#657789" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search position-relative">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                </svg>
+                                <input class="card__search_Input form-control" placeholder="ابحث هنا" />
+                            </div>
+                            <a class="btn btn-primary btn-wide add-new-member mrmd" href="#added-new-member">اضافة
+                                عضو جديد</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-responsive mtmd">
+                    <table class="js-datatable table table-striped table-borderless table-hover">
+                        <thead>
+                            <tr>
+                                <th>اسم العضو</th>
+                                <th>الدور</th>
+                                <th>نوع الجهة</th>
+                                <th>اسم الجهة</th>
+                                <th>تاريخ الانشاء</th>
+                                <th>إجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>فيصل محمد</td>
+                                <td>عضو</td>
+                                <td>جهة شقيقة</td>
+                                <td>جهة شئون البيئة التابعة للوزارة</td>
+                                <td>1441/5/25</td>
+                                <td>
+                                    <button data-toggle="modal" data-target="#staticBackdrop">
+                                        <i class="far fa-trash-alt"></i>
+                                    </button>
+
+                                    <button>
+                                        <i class="far fa-edit"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>فيصل محمد</td>
+                                <td>عضو</td>
+                                <td>جهة شقيقة</td>
+                                <td>جهة شئون البيئة التابعة للوزارة</td>
+                                <td>1441/5/25</td>
+                                <td>
+                                    <button data-toggle="modal" data-target="#staticBackdrop">
+                                        <i class="far fa-trash-alt"></i>
+                                    </button>
+
+                                    <button>
+                                        <i class="far fa-edit"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>فيصل محمد</td>
+                                <td>عضو</td>
+                                <td>جهة شقيقة</td>
+                                <td>جهة شئون البيئة التابعة للوزارة</td>
+                                <td>1441/5/25</td>
+                                <td>
+                                    <button data-toggle="modal" data-target="#staticBackdrop">
+                                        <i class="far fa-trash-alt"></i>
+                                    </button>
+
+                                    <button>
+                                        <i class="far fa-edit"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>فيصل محمد</td>
+                                <td>عضو</td>
+                                <td>جهة شقيقة</td>
+                                <td>جهة شئون البيئة التابعة للوزارة</td>
+                                <td>1441/5/25</td>
+                                <td>
+                                    <button data-toggle="modal" data-target="#staticBackdrop">
+                                        <i class="far fa-trash-alt"></i>
+                                    </button>
+
+                                    <button>
+                                        <i class="far fa-edit"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-12 p-0">
+                    <div class=" member-data position-relative ">
+                        <div class="row mx-0">
+                            <div class="col-12 p-0">
+                                <div class="d-flex justify-content-between align-items-baseline">
+                                    <p class="title">
+                                        بيانات العضو
+                                    </p>
+                                    <div class="icons">
+                                        <button data-toggle="modal" data-target="#staticBackdrop">
+                                            <i class="far fa-trash-alt"></i>
+                                        </button>
+                                        <button>
+                                            <i class="far fa-edit"></i>
+                                        </button>
+                                        <button>
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mx-0 mtmd">
+                            <div class="col-5 ml-4 bgGray mb-2">
+                                <label for="" class="col-form-label w-25">اسم
+                                    العضو :</label>
+                                <span>فيصل محمد</span>
+                            </div>
+
+                            <div class="col-5 ml-4 bgGray mb-2y">
+                                <label for="" class="col-form-label w-25">تاريخ
+                                    الانشاء :</label>
+                                <span>14/04/1441</span>
+                            </div>
+
+                            <div class="col-5 ml-4 mb-2">
+                                <label for="" class="col-form-label w-25">الجوال
+                                    :</label>
+                                <span>+9667.....</span>
+                            </div>
+
+                            <div class="col-5 ml-4 mb-2">
+                                <label for="" class="col-form-label w-25">نوع
+                                    الجهة
+                                    :</label>
+                                <span>جهة شقيقة</span>
+                            </div>
+
+                            <div class="col-5 ml-4 mb-2 bgGray">
+                                <label for="" class="col-form-label w-25">البريد
+                                    الالكتروني :</label>
+                                <span>example@gmail.com</span>
+                            </div>
+
+                            <div class="col-5 ml-4 mb-2 bgGray">
+                                <label for="" class="col-form-label w-25">درجة
+                                    المشاركة :</label>
+                                <span>سمو</span>
+                            </div>
+
+                            <div class="col-5 ml-4 mb-2">
+                                <label for="" class="col-form-label w-25">النوع
+                                    :</label>
+                                <span>ذكر</span>
+                            </div>
+
+                            <div class="col-5 ml-4 mb-2">
+                                <label for="" class="col-form-label w-25">الدور
+                                    :</label>
+                                <span>عضو</span>
+                            </div>
+
+                            <div class="col-5 ml-4 mb-2 bgGray">
+                                <label for="" class="col-form-label w-25">اسم
+                                    الجهة
+                                    :</label>
+                                <span>جهة شئون البيئة التابعة للوزارة</span>
+                            </div>
+
+                            <div class="col-5 ml-4 mb-2 bgGray">
+                                <label for="" class="col-form-label w-25">SSO
+                                    link
+                                    :</label>
+                                <span>SSO link</span>
+                            </div>
+
+                            <div class="col-5 ml-4 mb-2">
+                                <label for="" class="col-form-label w-25">العضوية
+                                    :</label>
+                                <span>عضو داخل النظام</span>
+                            </div>
+
+                            <div class="col-5 ml-4 mb-2">
+                                <label for="" class="col-form-label w-25">تنبيه
+                                    بواسطة
+                                    :</label>
+                                <span>البريد الالكتروني</span>
+                            </div>
+                            <div class="col-12 p-0 mb-2">
+                                <p class="sub-title">بيانات المشرف</p>
+                                <div class="row mx-0 mtmd">
+                                    <div class="col-5 ml-4 bgGray mb-2">
+                                        <label for="" class="col-form-label w-25">الاسم
+                                            :</label>
+                                        <span>محمد عبدالله</span>
+                                    </div>
+
+                                    <div class="col-5 ml-4 bgGray mb-2y">
+                                        <label for="" class="col-form-label w-25">البريد
+                                            الالكتروني :</label>
+                                        <span>example@yahoo.com</span>
+                                    </div>
+
+                                    <div class="col-5 ml-4 mb-2">
+                                        <label for="" class="col-form-label w-25">الجوال
+                                            :</label>
+                                        <span>+9667.....</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mb-2 p-0">
+                                <p class="sub-title">الملفات</p>
+                                <div class="d-flex">
+                                    <div class="bgGray mb-3 ml-3">
+                                        <div class="file file-download pl-5 py-2">
+                                            <span class="filename file-colored">docx.
+                                                ملف</span>
+                                            <span class="text-upper">حجم الملف:
+                                                243 ك.ب</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="bgGray mb-3 ml-3">
+                                        <div class="file file-download pl-5 py-2">
+                                            <span class="filename file-colored">docx.
+                                                ملف</span>
+                                            <span class="text-upper">حجم الملف:
+                                                243 ك.ب</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

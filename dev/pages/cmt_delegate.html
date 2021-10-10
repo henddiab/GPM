@@ -1,0 +1,143 @@
+{% extends "cmt_layout.html" %} {% set title = 'التفويضات' %} {% block content %}
+
+<div class="main-content legan" id="mainContent">
+
+    <div class="container-fluid">
+
+        <div class="mtlg">
+            <div class="row position-relative mx-0">
+                <div class="col-12 delegated-new-member">
+                    <div class="text-left">
+                        <button class="btn btn-primary btn-wide blured">تفويض عضو</button>
+                    </div>
+
+                    <p class="title mbmd">تفويض عضو</p>
+                    <div class="w-75 ">
+                        <div class="w-100">
+                            <p class="sub-title m-0">بيانات المفوض اليه</p>
+                            <div class="d-flex">
+                                <div class="w-50 ml-4">
+                                    <div><label for="" class="col-form-label">
+                                            مفوض الي: <span class="required">*</span></label>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <select name="" class="form-control">
+                                            <option>محمد ابراهيم</option>
+                                            <option>احمد سليمان</option>
+                                            <option>عبد الله محمد</option>
+                                            <option>مصطفي اسماعيل</option>
+                                            <option>محمود سليمان</option>
+                                            <option>احمد ابراهيم</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="d-flex">
+                                <div class="w-50 ml-4">
+                                    <div><label for="" class="col-form-label">
+                                            تاريخ الانتهاء: <span class="required">*</span></label>
+                                    </div>
+                                    <input type="text" class="form-control selector" readonly>
+                                </div>
+
+                                <div class="w-50">
+                                    <div><label for="" class="col-form-label">تاريخ البدء:
+                                            <span class="required">*</span></label>
+                                    </div>
+                                    <input type="text" class="form-control selector" readonly>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-75 text-left mtlg">
+                        <button class="btn btn-gray btn-wide close-new-delegate">الغاء</button>
+                        <button class="btn btn-primary btn-wide">ارسال الي العضو</button>
+                    </div>
+                </div>
+
+
+                <div class="col-12 p-0">
+                    <div class="d-flex justify-content-between mbmd">
+                        <p class="title m-0">التفويضات</p>
+                        <div class="d-flex members">
+                            <div class="Icon position-relative">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#657789" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search position-relative">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                </svg>
+                                <input class="card__search_Input form-control" placeholder="ابحث هنا" />
+                            </div>
+                            <a class="btn btn-primary btn-wide delegate-new-member mrmd" href="#delegated-new-member">تفويض عضو</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-responsive mtmd">
+                    <table class="js-datatable table table-striped table-borderless table-hover">
+                        <thead>
+                            <tr>
+                                <th>المفوض اليه</th>
+                                <th>مدة التكليف</th>
+                                <th>تاريخ الانتهاء </th>
+                                <th>تاريخ البدء</th>
+                                <th>إجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>فيصل محمد</td>
+                                <td>دائمة</td>
+                                <td>1441/5/25</td>
+                                <td>1441/5/25</td>
+                                <td>
+                                    <button data-toggle="modal" data-target="#staticBackdrop">
+                                        <i class="far fa-trash-alt"></i>
+                                    </button>
+
+                                    <button>
+                                        <i class="far fa-edit"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>فيصل محمد</td>
+                                <td>دائمة</td>
+                                <td>1441/5/25</td>
+                                <td>1441/5/25</td>
+                                <td>
+                                    <button data-toggle="modal" data-target="#staticBackdrop">
+                                        <i class="far fa-trash-alt"></i>
+                                    </button>
+
+                                    <button>
+                                        <i class="far fa-edit"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>فيصل محمد</td>
+                                <td>دائمة</td>
+                                <td>1441/5/25</td>
+                                <td>1441/5/25</td>
+                                <td>
+                                    <button data-toggle="modal" data-target="#staticBackdrop">
+                                        <i class="far fa-trash-alt"></i>
+                                    </button>
+
+                                    <button>
+                                        <i class="far fa-edit"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

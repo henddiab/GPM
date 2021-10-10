@@ -1,0 +1,212 @@
+{% extends "cmt_layout.html" %} {% set title = 'التقويم' %} {% block content %}
+
+<div class="main-content legan" id="mainContent">
+
+    <div class="p-5">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-between mblg pr-0">
+                <form class="switchForm position-relative" id="choose">
+                    <input type="radio" name="rdo" id="yes" checked />
+                    <input type="radio" name="rdo" id="no" />
+                    <div class="switch">
+                        <label id="hijri" for="yes">هـ</label><label id="melad" for="no">م</label>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-lg-3 d-none d-lg-block p-0">
+                <div class="small-cal border-bottom" id='source-calendar'></div>
+                <div class="bordered2 mtmd">
+                    <div class="mham-status d-flex w-100 align-items-center p-3 flex-wrap">
+                        <div class="ml-3 w-auto mbsm">
+                            <span class="sky"></span>
+                            <span class="m-0 py-2">لجان وزارية</spanp>
+                </div>
+
+                <div class="ml-3 w-auto mbsm">
+                    <span class="yellow"></span>
+                            <span class="m-0 py-2">لجان مجالس</spanp>
+                </div>
+
+                <div class="ml-3 w-auto mbsm">
+                    <span class="purple"></span>
+                            <span class="m-0 py-2">لجان خبراء</spanp>
+                </div>
+
+                <div class="ml-3 w-auto mbsm">
+                    <span class="other"></span>
+                            <span class="m-0 py-2">لجان أخري</spanp>
+                </div>
+            </div>
+        </div>
+
+        <div class="bordered2 mtmd">
+            <div class="border-bottom text-center">
+                <p class="sub-title">اجتماعات اليوم</p>
+            </div>
+
+            <div class="mham-status p-3">
+                <div class="d-flex w-100 align-items-baseline mbmd">
+                    <span class="purple"></span>
+                            <div class="w-auto">
+                                <p class="m-0">اجتماع مجلس شئون اللجان</p>
+                                <div class="w-auto">
+                                    <div class="d-flex w-auto">
+                                        <p class="hint m-0">3hours</p>
+                                        <p class="hint m-0">-</p>
+                                        <p class="hint m-0">3:pm</p>
+                                    </div>
+                                    <span class="hint">
+                                <i class="fas fa-map-marker-alt ml-1"></i>
+                            </span>
+                                    <span class="hint">الرياض، فندق
+                                أبيس
+                                الدور الأول قاعة المناسبات
+                            </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex w-100 align-items-baseline mbmd">
+                            <span class="purple"></span>
+                            <div class="w-auto">
+                                <p class="m-0">اجتماع مجلس شئون اللجان</p>
+                                <div class="w-auto">
+                                    <div class="d-flex w-auto">
+                                        <p class="hint m-0">3hours</p>
+                                        <p class="hint m-0">-</p>
+                                        <p class="hint m-0">3:pm</p>
+                                    </div>
+                                    <span class="hint">
+                                <i class="fas fa-map-marker-alt ml-1"></i>
+                            </span>
+                                    <span class="hint">الرياض، فندق
+                                أبيس
+                                الدور الأول قاعة المناسبات
+                            </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-9 col-12">
+                <div id='calendar'></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var initialLocaleCode = 'ar';
+
+        var calendarEl = document.getElementById('calendar');
+        var srcCalendarEl = document.getElementById('source-calendar');
+        var lang = localStorage.getItem('lang');
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            headerToolbar: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+            },
+            initialDate: '2020-09-12',
+            locale: initialLocaleCode,
+            buttonIcons: false, // show the prev/next text
+            weekNumbers: true,
+            navLinks: true, // can click day/week names to navigate views
+            editable: true,
+            dayMaxEvents: true, // allow "more" link when too many events
+            events: [{
+                title: 'All Day Event',
+                start: '2020-09-01',
+                backgroundColor: '#fbb040',
+                borderColor: '#fbb040'
+            }, {
+                title: 'Long Event',
+                start: '2020-09-07',
+                end: '2020-09-10',
+                backgroundColor: '#0C66E1',
+                borderColor: '#0C66E1'
+            }, {
+                groupId: 999,
+                title: 'Repeating Event',
+                start: '2020-09-09T16:00:00',
+                backgroundColor: '#75A9F2',
+                borderColor: '#75A9F2'
+            }, {
+                groupId: 999,
+                title: 'Repeating Event',
+                start: '2020-09-16T16:00:00'
+            }, {
+                title: 'Conference',
+                start: '2020-09-11',
+                end: '2020-09-13'
+            }, {
+                title: 'Meeting',
+                start: '2020-09-12T10:30:00',
+                end: '2020-09-12T12:30:00'
+            }, {
+                title: 'Lunch',
+                start: '2020-09-12T12:00:00'
+            }, {
+                title: 'Meeting',
+                start: '2020-09-12T14:30:00'
+            }, {
+                title: 'Happy Hour',
+                start: '2020-09-12T17:30:00'
+            }, {
+                title: 'Dinner',
+                start: '2020-09-12T20:00:00'
+            }, {
+                title: 'Birthday Party',
+                start: '2020-09-13T07:00:00'
+            }, {
+                title: 'Click for Google',
+                url: 'http://google.com/',
+                start: '2020-09-28'
+            }]
+        });
+
+        var srcCalendar = new FullCalendar.Calendar(srcCalendarEl, {
+            editable: true,
+            initialDate: '2020-09-12',
+            locale: initialLocaleCode,
+            events: [{
+                start: '2020-09-01',
+                backgroundColor: '#fbb040',
+                borderColor: '#fbb040'
+            }, {
+                start: '2020-09-07',
+                end: '2020-09-10',
+                backgroundColor: '#0C66E1',
+                borderColor: '#0C66E1'
+            }],
+            eventLeave: function(info) {
+                console.log('event left!', info.event);
+            }
+        });
+
+        calendar.render();
+        srcCalendar.render();
+        if (lang === null || lang === 'ar') {
+            calendar.setOption('locale', 'ar-sa');
+            srcCalendar.setOption('locale', 'ar-sa');
+        } else if (lang === 'en') {
+            calendar.setOption('locale', 'en');
+            srcCalendar.setOption('locale', 'en');
+        }
+
+        document.getElementById("melad").addEventListener('click', function() {
+            calendar.setOption('locale', 'ar-dz');
+            srcCalendar.setOption('locale', 'ar-dz');
+        });
+
+        document.getElementById("hijri").addEventListener('click', function() {
+            calendar.setOption('locale', 'ar-sa');
+            srcCalendar.setOption('locale', 'ar-sa');
+        });
+    });
+</script>
+{% endblock content %}

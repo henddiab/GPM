@@ -1,0 +1,1189 @@
+{% extends "cmt_layout.html" %} {% set title = 'أكواد النظام' %} {% block content %}
+
+<div class="main-content legan" id="mainContent">
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xs">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+                </div>
+                <div class="modal-body text-center">
+                    <div>
+                        <i class="far fa-trash-alt"></i>
+                    </div>
+                    <h2 class="title" id="exampleModalLabel">هل تريد ازالة العنصر؟</h2>
+                    <p>عند ازالة العنصر لا يمكن استعادته مرة اخري
+                    </p>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="button" class="btn btn-wide btn-primary" data-dismiss="modal">نعم</button>
+                    <button type="button" class="btn btn-wide btn-primary-reverse" data-dismiss="modal">لا</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mtlg">
+        <div class="row mx-0">
+            <div class="col-12">
+                <div class="tabs mtxs index-grid-box">
+                    <!-- tabs links -->
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#tab0" data-toggle="tab" role="tab" aria-selected="true">اللجان</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tab1" data-toggle="tab" role="tab">الاجتماعات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tab2" data-toggle="tab" role="tab">التنفيذ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tab3" data-toggle="tab" role="tab">الجهات والاعضاء</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="tab0" role="tabpanel" aria-labelledby="tab0">
+                            <section class="section mtsm">
+                                <div class="row">
+                                    <div class="col-12 pr-0">
+                                        <p class="title">
+                                            اللجان
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 pr-0">
+                                        <p class="sub-title">
+                                            تصنيف اللجنة
+                                        </p>
+                                        <div class="d-flex justify-content-between">
+                                            <input class="form-control w-75" type="text" placeholder="تصنيف اللجنة">
+                                            <div data-attr="classify" class="plus d-flex justify-content-center align-items-center">
+                                                <button class="btn btn-primary btn-wide">اضافة</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive mtmd">
+                                            <table data-attr="classify" class="mham js-datatable table table-striped table-borderless table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="w-50">تصنيف اللجنة</th>
+                                                        <th class="w-25">النوع</th>
+                                                        <th> اجراءات</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>لجان دولية
+                                                        </td>
+                                                        <td>خبراء</td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>لجان محلية</td>
+                                                        <td>مجالس وهيئات</td>
+
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>مجلس الادارة</td>
+                                                        <td>مناطق</td>
+
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>جهة شئون البيئة التابعة للوزارة
+                                                        </td>
+                                                        <td>خبراء</td>
+
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 pl-0">
+                                        <p class="sub-title">
+                                            مصدر اللجنة
+                                        </p>
+                                        <div class="d-flex justify-content-between">
+                                            <input class="form-control w-75" type="text" placeholder="مصدر اللجنة">
+                                            <div data-attr="source" class="plus d-flex justify-content-center align-items-center">
+                                                <button class="btn btn-primary btn-wide">اضافة</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive mtmd">
+                                            <table data-attr="source" class="mham js-datatable table table-striped table-borderless table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="w-75">مصدر اللجنة</th>
+                                                        <th> اجراءات</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>الديوان الملكي
+                                                        </td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>هيئة الخبراء</td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>تكليف او توجيه داخلي</td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>مجلس الشئون الاقتصادية والتنمية
+                                                        </td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6 pr-0">
+                                        <p class="sub-title">
+                                            مدة اللجنة
+                                        </p>
+                                        <div class="d-flex justify-content-between">
+                                            <input class="form-control w-75" type="text" placeholder="مدة اللجنة">
+                                            <div data-attr="quant" class="plus d-flex justify-content-center align-items-center">
+                                                <button class="btn btn-primary btn-wide">اضافة</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive mtmd">
+                                            <table data-attr="quant" class="mham js-datatable table table-striped table-borderless table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="w-75">مدة اللجنة</th>
+                                                        <th> اجراءات</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>حسب الحاجة
+                                                        </td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>مؤقت</td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>محددة المدة</td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>حسب النظام
+                                                        </td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 pl-0">
+                                        <p class="sub-title">
+                                            حالة حضور الوزير
+                                        </p>
+                                        <div class="d-flex justify-content-between">
+                                            <input class="form-control w-75" type="text" placeholder="حالة حضور الوزير">
+                                            <div data-attr="status" class="plus d-flex justify-content-center align-items-center">
+                                                <button class="btn btn-primary btn-wide">اضافة</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive mtmd">
+                                            <table data-attr="status" class="mham js-datatable table table-striped table-borderless table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="w-75">حالة حضور الوزير</th>
+                                                        <th> اجراءات</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>بنفسه
+                                                        </td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>النائب</td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>المساعد</td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>مندوب
+                                                        </td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6 pr-0">
+                                        <p class="sub-title">
+                                            دور الوزير
+                                        </p>
+                                        <div class="d-flex justify-content-between">
+                                            <input class="form-control w-75" type="text" placeholder="دور الوزير">
+                                            <div data-attr="role" class="plus d-flex justify-content-center align-items-center">
+                                                <button class="btn btn-primary btn-wide">اضافة</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive mtmd">
+                                            <table data-attr="role" class="mham js-datatable table table-striped table-borderless table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="w-75">دو ر الوزير</th>
+                                                        <th> اجراءات</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>رئيس
+                                                        </td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>عضو مجلس ادارة</td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>عضو</td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 pl-0">
+                                        <p class="sub-title">
+                                            دور الانعقاد
+                                        </p>
+                                        <div class="d-flex justify-content-between">
+                                            <input class="form-control w-75" type="text" placeholder="دور الانعقاد">
+                                            <div data-attr="join" class="plus d-flex justify-content-center align-items-center">
+                                                <button class="btn btn-primary btn-wide">اضافة</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive mtmd">
+                                            <table data-attr="join" class="mham js-datatable table table-striped table-borderless table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="w-75">دور الانعقاد</th>
+                                                        <th> اجراءات</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>عند الحاجة
+                                                        </td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>يومي</td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>اسبوعي</td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6 pr-0">
+                                        <p class="sub-title">
+                                            صفة الوزير
+                                        </p>
+                                        <div class="d-flex justify-content-between">
+                                            <input class="form-control w-75" type="text" placeholder="صفة الوزير">
+                                            <div data-attr="character" class="plus d-flex justify-content-center align-items-center">
+                                                <button class="btn btn-primary btn-wide">اضافة</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive mtmd">
+                                            <table data-attr="character" class="mham js-datatable table table-striped table-borderless table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="w-75">صفة الوزير</th>
+                                                        <th> اجراءات</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>صفة اعتبارية
+                                                        </td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>صفة شخصية</td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>بدون</td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 pl-0">
+                                        <p class="sub-title">
+                                            صفة الوزارة
+                                        </p>
+                                        <div class="d-flex justify-content-between">
+                                            <input class="form-control w-75" type="text" placeholder="صفة الوزارة">
+                                            <div data-attr="character2" class="plus d-flex justify-content-center align-items-center">
+                                                <button class="btn btn-primary btn-wide">اضافة</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive mtmd">
+                                            <table data-attr="character2" class="mham js-datatable table table-striped table-borderless table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="w-75">صفة الوزارة</th>
+                                                        <th> اجراءات</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>رئاسة
+                                                        </td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>مشاركة</td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+
+                        <div class="tab-pane fade show" id="tab1" role="tabpanel" aria-labelledby="tab1">
+                            <section class="section mtsm">
+                                <div class="row">
+                                    <div class="col-12 pr-0">
+                                        <p class="title">
+                                            الاجتماعات
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 pr-0">
+                                        <p class="sub-title">
+                                            الدور في الاجتماع
+                                        </p>
+                                        <div class="d-flex justify-content-between">
+                                            <input class="form-control w-75" type="text" placeholder="الدور في الاجتماع">
+                                            <div data-attr="meetingRole" class="plus d-flex justify-content-center align-items-center">
+                                                <button class="btn btn-primary btn-wide">اضافة</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive mtmd">
+                                            <table data-attr="meetingRole" class="mham js-datatable table table-striped table-borderless table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="w-75">الدور في الاجتماع</th>
+                                                        <th> اجراءات</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>مدير
+                                                        </td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>متحدث</td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>مشارك</td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>كاتب محضر
+                                                        </td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 pl-0">
+                                        <p class="sub-title">
+                                            حالة حضور الاجتماع
+                                        </p>
+                                        <div class="d-flex justify-content-between">
+                                            <input class="form-control w-75" type="text" placeholder="حالة حضور الاجتماع">
+                                            <div data-attr="meetingStatus" class="plus d-flex justify-content-center align-items-center">
+                                                <button class="btn btn-primary btn-wide">اضافة</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive mtmd">
+                                            <table data-attr="meetingStatus" class="mham js-datatable table table-striped table-borderless table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="w-75">حال حضور الاجتماع</th>
+                                                        <th> اجراءات</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>حضور
+                                                        </td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>حضور جزئي</td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>غياب</td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+
+                        <div class="tab-pane fade show" id="tab2" role="tabpanel" aria-labelledby="tab2">
+                            <section class="section mtsm">
+                                <div class="row">
+                                    <div class="col-12 pr-0">
+                                        <p class="title">
+                                            التنفيذ
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 pr-0">
+                                        <p class="sub-title">
+                                            اسباب عدم اتخاذ قرارات
+                                        </p>
+                                        <div class="d-flex justify-content-between">
+                                            <input class="form-control w-75" type="text" placeholder="اسباب عدم اتخاذ قرارات">
+                                            <div data-attr="reasons" class="plus d-flex justify-content-center align-items-center">
+                                                <button class="btn btn-primary btn-wide">اضافة</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive mtmd">
+                                            <table data-attr="reasons" class="mham js-datatable table table-striped table-borderless table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="w-75">اسباب عدم اتخاذ قرارات/th>
+                                                            <th> اجراءات</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>لا زال قيد البحث
+                                                        </td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>تعذر الوصول لاتفاق</td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>عدم اكتمال النصاب</td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 pl-0">
+                                        <p class="sub-title">
+                                            اسباب عدم رفع المحضر
+                                        </p>
+                                        <div class="d-flex justify-content-between">
+                                            <input class="form-control w-75" type="text" placeholder="اسباب عدم رفع المحضر">
+                                            <div data-attr="attendance" class="plus d-flex justify-content-center align-items-center">
+                                                <button class="btn btn-primary btn-wide">اضافة</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive mtmd">
+                                            <table data-attr="attendance" class="mham js-datatable table table-striped table-borderless table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="w-75">اسباب عدم رفع المحضر</th>
+                                                        <th> اجراءات</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>لم يتم الاعتماد
+                                                        </td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>تاخير في المحضر السري</td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6 pr-0">
+                                        <p class="sub-title">
+                                            الزامية القرار
+                                        </p>
+                                        <div class="d-flex justify-content-between">
+                                            <input class="form-control w-75" type="text" placeholder="الزامية القرار">
+                                            <div data-attr="decision" class="plus d-flex justify-content-center align-items-center">
+                                                <button class="btn btn-primary btn-wide">اضافة</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive mtmd">
+                                            <table data-attr="decision" class="mham js-datatable table table-striped table-borderless table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="w-75">الزامية القرار</th>
+                                                        <th> اجراءات</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>ملزم
+                                                        </td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>غير ملزم</td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 pl-0">
+                                        <p class="sub-title">
+                                            تصنيف المحضر
+                                        </p>
+                                        <div class="d-flex justify-content-between">
+                                            <input class="form-control w-75" type="text" placeholder="تصنيف المحضر">
+                                            <div data-attr="classify2" class="plus d-flex justify-content-center align-items-center">
+                                                <button class="btn btn-primary btn-wide">اضافة</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive mtmd">
+                                            <table data-attr="classify2" class="mham js-datatable table table-striped table-borderless table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="w-75">تصنيف المحضر</th>
+                                                        <th> اجراءات</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>محضر
+                                                        </td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>محضر بالتمرير</td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6 pr-0">
+                                        <p class="sub-title">
+                                            حالة اتخاذ القرارات
+                                        </p>
+                                        <div class="d-flex justify-content-between">
+                                            <input class="form-control w-75" type="text" placeholder="حالة اتخاذ القرارات">
+                                            <div data-attr="decisionStatus" class="plus d-flex justify-content-center align-items-center">
+                                                <button class="btn btn-primary btn-wide">اضافة</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive mtmd">
+                                            <table data-attr="decisionStatus" class="mham js-datatable table table-striped table-borderless table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="w-75">حالة اتخاذ قرارات</th>
+                                                        <th> اجراءات</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>لم يتم اتخاذ قرارات
+                                                        </td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>تم اتخاذ قرارات</td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 pl-0">
+                                        <p class="sub-title">
+                                            حالة رفع المحضر
+                                        </p>
+                                        <div class="d-flex justify-content-between">
+                                            <input class="form-control w-75" type="text" placeholder="حالة رفع المحضر">
+                                            <div data-attr="status2" class="plus d-flex justify-content-center align-items-center">
+                                                <button class="btn btn-primary btn-wide">اضافة</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive mtmd">
+                                            <table data-attr="status2" class="mham js-datatable table table-striped table-borderless table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="w-75">حالة رفع المحضر</th>
+                                                        <th> اجراءات</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>غير موجود
+                                                        </td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>تحت الاعداد</td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>قيد المراجعة</td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+
+                        <div class="tab-pane fade show" id="tab3" role="tabpanel" aria-labelledby="tab3">
+                            <section class="section mtsm">
+                                <div class="row">
+                                    <div class="col-12 pr-0">
+                                        <p class="title">
+                                            الجهات و الاعضاء
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 pr-0">
+                                        <p class="sub-title">
+                                            الرتبة
+                                        </p>
+                                        <div class="d-flex justify-content-between">
+                                            <input class="form-control w-75" type="text" placeholder="الرتبة">
+                                            <div data-attr="position" class="plus d-flex justify-content-center align-items-center">
+                                                <button class="btn btn-primary btn-wide">اضافة</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive mtmd">
+                                            <table data-attr="position" class="mham js-datatable table table-striped table-borderless table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="w-75">الرتبة</th>
+                                                        <th> اجراءات</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>سمو
+                                                        </td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>معالي</td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>سعادة</td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>استاذ
+                                                        </td>
+                                                        <td>
+                                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                            <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock content %}

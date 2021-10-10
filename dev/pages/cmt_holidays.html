@@ -1,0 +1,185 @@
+{% extends "cmt_layout.html" %} {% set title = 'العطلات الرسمية' %} {% block content %}
+
+<div class="main-content legan" id="mainContent">
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xs">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body text-center">
+                    <div>
+                        <i class="far fa-trash-alt"></i>
+                    </div>
+                    <h2 class="title" id="exampleModalLabel">هل تريد ازالة العنصر؟</h2>
+                    <p>عند ازالة العنصر لا يمكن استعادته مرة اخري
+                    </p>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="button" class="btn btn-wide btn-primary" data-dismiss="modal">نعم</button>
+                    <button type="button" class="btn btn-wide btn-primary-reverse" data-dismiss="modal">لا</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mtlg">
+        <div class="row mx-0">
+            <div class="mtlg col-12">
+                <div class="row mx-0">
+                    <div class="col-12 p-0">
+                        <div id="add_holiday">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="row  mx-0">
+                                        <div class="col-12 mtmd  d-flex justify-content-between">
+                                            <p class="title m-0">
+                                                اضافة عطلة
+                                            </p>
+                                            <button class="btn btn-primary btn-wide pressed">اضافة عطلة</button>
+                                        </div>
+
+                                        <div class="col-11 mtmd">
+                                            <p class="sub-title m-0">
+                                                بيانات العطلة
+                                            </p>
+                                        </div>
+
+                                        <div class="col-10">
+                                            <div><label for="" class="col-form-label">
+                                                    عنوان العطلة:
+                                                    <span>*</span>
+                                                </label>
+                                            </div>
+
+                                            <input type="text" name="" class="form-control" placeholder="عنوان العطلة">
+                                        </div>
+
+                                        <div class="col-5">
+                                            <div><label for="" class="col-form-label">
+                                                    تاريخ البداية:
+                                                    <span>*</span>
+                                                </label>
+                                            </div>
+
+                                            <input type="text" class="form-control selector" readonly>
+                                        </div>
+
+                                        <div class="col-5">
+                                            <div><label for="" class="col-form-label">
+                                                    تاريخ النهاية:
+                                                    <span>*</span>
+                                                </label>
+                                            </div>
+
+                                            <input type="text" class="form-control selector" readonly>
+                                        </div>
+                                        <div class="col-10">
+                                            <div><label for="" class="col-form-label">
+                                                    الوصف:
+                                                    <span>*</span>
+                                                </label>
+                                            </div>
+
+                                            <input type="text" name="" class="form-control" placeholder="الوصف">
+                                        </div>
+                                    </div>
+                                    <div class="row  mx-0">
+                                        <div class="col-10 text-left mtlg">
+                                            <button class="btn btn-gray btn-wide close_holiday">الغاء</button>
+                                            <button class="btn btn-primary btn-wide">اضافة</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 p-0">
+                        <div class="d-flex justify-content-between mbmd">
+                            <p class="title m-0">العطلات الرسمية</p>
+                            <div class="d-flex">
+                                <a class="btn btn-primary btn-wide add_holiday mrmd" href="#add_holiday">اضافة
+                                    عطلة</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 p-0">
+                        <div class="table-responsive members">
+                            <table class="js-datatable table table-striped table-borderless table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="w-25">اسم العطلة</th>
+                                        <th class="w-25">الوصف</th>
+                                        <th>تاريخ البداية</th>
+                                        <th>تاريخ النهاية</th>
+                                        <th>اجراءات</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>عيد الفطر المبارك
+                                        </td>
+                                        <td>-
+                                        </td>
+                                        <td>1441/8/23</td>
+                                        <td>1441/8/23
+                                        </td>
+                                        <td>
+                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                <i class="far fa-trash-alt"></i>
+                                            </button>
+
+                                            <button>
+                                                <i class="far fa-edit"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>عيد الفطر المبارك
+                                        </td>
+                                        <td>-
+                                        </td>
+                                        <td>1441/8/23</td>
+                                        <td>1441/8/23
+                                        </td>
+                                        <td>
+                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                <i class="far fa-trash-alt"></i>
+                                            </button>
+
+                                            <button>
+                                                <i class="far fa-edit"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>عيد الفطر المبارك
+                                        </td>
+                                        <td>-
+                                        </td>
+                                        <td>1441/8/23</td>
+                                        <td>1441/8/23
+                                        </td>
+                                        <td>
+                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                <i class="far fa-trash-alt"></i>
+                                            </button>
+
+                                            <button>
+                                                <i class="far fa-edit"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

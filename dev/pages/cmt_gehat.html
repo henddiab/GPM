@@ -1,0 +1,383 @@
+{% extends "cmt_layout.html" %} {% set title = 'الجهات' %} {% block content %}
+
+<div class="main-content legan" id="mainContent">
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xs">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                </div>
+                <div class="modal-body text-center">
+                    <div>
+                        <i class="far fa-trash-alt"></i>
+                    </div>
+                    <h2 class="title" id="exampleModalLabel">هل تريد ازالة العنصر؟</h2>
+                    <p>عند ازالة العنصر لا يمكن استعادته مرة اخري
+                    </p>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="button" class="btn btn-wide btn-primary" data-dismiss="modal">نعم</button>
+                    <button type="button" class="btn btn-wide btn-primary-reverse" data-dismiss="modal">لا</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+
+        <div class="mtlg">
+            <div class="row position-relative mx-0">
+                <div class="col-12 added-new-geha">
+                    <div class="text-left">
+                        <button class="btn btn-primary btn-wide pressed">اضافة
+                            جهة</button>
+                    </div>
+
+                    <p class="title mbmd">اضافة جهة</p>
+                    <div class="w-75 ">
+                        <div class="w-100">
+                            <p class="sub-title m-0">بيانات اساسية</p>
+                            <div class="d-flex">
+                                <div class="w-49">
+                                    <div><label for="" class="col-form-label">اسم الجهة:
+                                            <span class="required">*</span></label>
+                                    </div>
+                                    <input type="text" name="" class="form-control" placeholder="اسم الجهة">
+                                </div>
+                            </div>
+
+                            <div class="d-flex">
+                                <div class="w-50 ml-4">
+                                    <div><label for="" class="col-form-label">
+                                            نوع الجهة: <span class="required">*</span></label>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <select name="" class="form-control">
+                                            <option>وزارة</option>
+                                            <option>ادارة</option>
+                                            <option>وكالة</option>
+                                            <option>مجلس منطقة</option>
+                                            <option>هيئة تطوير منطقة</option>
+                                            <option>جهة شقيقة</option>
+                                            <option>هيئة خبراء</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="w-50">
+                                    <div><label for="" class="col-form-label">الجهة
+                                            التابعة:
+                                            <span class="required">*</span></label>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <select name="" class="form-control">
+                                            <option>وزارة الداخلية</option>
+                                            <option>وزارة التجارة</option>
+                                            <option>وكالة الشئون الاقتصادية الدولية</option>
+                                            <option>مجلش منطقة الرياض</option>
+                                            <option>مجلس تطوير منطقة جدة</option>
+                                            <option>المركز الوطني للتخصيص</option>
+                                            <option>الهيئة العامة للاحصاء</option>
+                                            <option>ادارة الهلال الاحمر</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex">
+                                <div class="w-50 ml-4">
+                                    <div><label for="" class="col-form-label">رئيس
+                                            الجهة:
+                                            <span class="required">*</span></label>
+                                    </div>
+                                    <input type="text" name="" class="form-control" placeholder="رئيس الجهة">
+                                </div>
+
+                                <div class="w-50">
+                                    <div><label for="" class="col-form-label">البريد
+                                            الالكتروني:
+                                            <span class="required">*</span></label>
+                                    </div>
+                                    <input type="text" name="" class="form-control" placeholder="البريد الالكتروني">
+                                </div>
+                            </div>
+
+                            <div class="d-flex">
+                                <div class="w-100">
+                                    <div><label for="" class="col-form-label">وصف الجهة:
+                                            <span class="required">*</span></label>
+                                    </div>
+                                    <textarea placeholder="وصف الجهة" name="" class="form-control" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-100">
+                            <p class="sub-title m-0">تمثيل الوزير</p>
+                            <div class="d-flex">
+                                <div class="w-50 ml-4">
+                                    <div><label for="" class="col-form-label">
+                                            دور الوزير: <span class="required">*</span></label>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <select name="" class="form-control">
+                                            <option>رئيس</option>
+                                            <option>عضو مجلس ادارة</option>
+                                            <option>عضو</option>
+                                            <option>ادارة قانونية</option>
+                                            <option>بدون </option>                                      
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="w-50">
+                                    <div><label for="" class="col-form-label">صفة
+                                            الوزير:
+                                            <span class="required">*</span></label>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <select name="" class="form-control">
+                                            <option>صفة اعتبارية</option>
+                                            <option>صفة شخصية</option>
+                                            <option>بدون</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-75 text-left ">
+                        <button class="btn btn-gray btn-wide close-new-geha">الغاء</button>
+                        <button class="btn btn-primary btn-wide">اضافة</button>
+                    </div>
+                </div>
+
+                <div class="col-12 p-0">
+                    <div class="d-flex justify-content-between mbmd">
+                        <p class="title m-0">الجهات</p>
+                        <div class="d-flex members">
+                            <div class="Icon position-relative">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#657789" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search position-relative">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                </svg>
+                                <input class="card__search_Input form-control" placeholder="ابحث هنا" />
+                            </div>
+                            <a class="btn btn-primary btn-wide add-new-geha mrmd" href="#added-new-geha">اضافة
+                                جهة</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-responsive members">
+                    <table class="js-datatable table table-striped table-borderless table-hover">
+                        <thead>
+                            <tr>
+                                <th>اسم الجهة</th>
+                                <th>رئيس الجهة</th>
+                                <th>نوع الجهة</th>
+                                <th>دور الوزير</th>
+                                <th>تاريخ الانشاء</th>
+                                <th>مفعل</th>
+                                <th>اجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-toggle="modal" data-target="#geha-data">جهة شئون البيئة التابعة للوزارة
+                                </td>
+                                <td>محمد عبدالله
+                                </td>
+                                <td>جهة شقيقة</td>
+                                <td>عضو
+                                </td>
+                                <td>1441/8/23
+                                </td>
+                                <td><i class="fas fa-check active"></i></td>
+                                <td>
+                                    <button data-toggle="modal" data-target="#staticBackdrop">
+                                        <i class="far fa-trash-alt"></i>
+                                    </button>
+
+                                    <button>
+                                        <i class="far fa-edit"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-toggle="modal" data-target="#geha-data">جهة شئون البيئة التابعة للوزارة
+                                </td>
+                                <td>محمد عبدالله
+                                </td>
+                                <td>جهة شقيقة</td>
+                                <td>عضو
+                                </td>
+                                <td>1441/8/23
+                                </td>
+                                <td><i class="fas fa-check active"></i></td>
+                                <td>
+                                    <button data-toggle="modal" data-target="#staticBackdrop">
+                                        <i class="far fa-trash-alt"></i>
+                                    </button>
+
+                                    <button>
+                                        <i class="far fa-edit"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-toggle="modal" data-target="#geha-data">جهة شئون البيئة التابعة للوزارة
+                                </td>
+                                <td>محمد عبدالله
+                                </td>
+                                <td>جهة شقيقة</td>
+                                <td>عضو
+                                </td>
+                                <td>1441/8/23
+                                </td>
+                                <td><i class="fas fa-check active"></i></td>
+                                <td>
+                                    <button data-toggle="modal" data-target="#staticBackdrop">
+                                        <i class="far fa-trash-alt"></i>
+                                    </button>
+
+                                    <button>
+                                        <i class="far fa-edit"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="modal fade" id="geha-data" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body scroll">
+                                <div class="col-12 p-0">
+                                    <div class=" geha-data position-relative ">
+                                        <div class="row mx-0">
+                                            <div class="col-12 p-0">
+                                                <div class="d-flex justify-content-between align-items-baseline">
+                                                    <p class="title">
+                                                        بيانات الجهة
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mx-0 mtmd">
+                                            <div class="col-5 ml-4 bgGray mb-2">
+                                                <label for="" class="col-form-label w-25">اسم
+                                                    الجهة :</label>
+                                                <span>جهة شئون البيئة التابعة للوزارة</span>
+                                            </div>
+
+                                            <div class="col-5 ml-4 bgGray mb-2y">
+                                                <label for="" class="col-form-label w-25">تاريخ
+                                                    الانشاء :</label>
+                                                <span>14/04/1441</span>
+                                            </div>
+
+                                            <div class="col-5 ml-4 mb-2">
+                                                <label for="" class="col-form-label w-25">: اسم
+                                                    الجهة التابعة
+                                                    :</label>
+                                                <span>جهة الشئون الإدارية لمحطات المياة </span>
+                                            </div>
+
+                                            <div class="col-5 ml-4 mb-2">
+                                                <label for="" class="col-form-label w-25">نوع
+                                                    الجهة
+                                                    :</label>
+                                                <span>جهة شقيقة</span>
+                                            </div>
+
+                                            <div class="col-5 ml-4 mb-2 bgGray">
+                                                <label for="" class="col-form-label w-25">رئيس
+                                                    الجهة:</label>
+                                                <span>محمد عبدالله</span>
+                                            </div>
+
+                                            <div class="col-5 ml-4 mb-2 bgGray">
+                                                <label for="" class="col-form-label w-25">صفة
+                                                    الوزير:</label>
+                                                <span>صفة اعتبارية</span>
+                                            </div>
+
+                                            <div class="col-5 ml-4 mb-2">
+                                                <label for="" class="col-form-label w-25">البريد
+                                                    الالكتروني :</label>
+                                                <span>example@gmail.com</span>
+                                            </div>
+
+                                            <div class="col-5 ml-4 mb-2">
+                                                <label for="" class="col-form-label w-25">دور
+                                                    الوزير:</label>
+                                                <span>عضو</span>
+                                            </div>
+
+                                            <div class="col-5 ml-4 mb-2 bgGray">
+                                                <label for="" class="col-form-label w-25">وصف
+                                                    الجهة
+                                                    :</label>
+                                                <span>جهة شئون البيئة التابعة للوزراة تهتم
+                                                    بتطوير البيئة</span>
+                                            </div>
+
+                                            <div class="col-12 p-0 mb-2">
+                                                <p class="sub-title">الاعضاء علي الجهة</p>
+                                                <div class="table-responsive mtmd w-35">
+                                                    <table class="gehat js-datatable table table-striped table-borderless table-hover">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>العضو</th>
+                                                                <th>الدور</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>احمد سليمان
+                                                                </td>
+                                                                <td>عضو</td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>احمد بكار
+                                                                </td>
+                                                                <td>وكيل وزارة</td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>ابراهيم سليمان
+                                                                </td>
+                                                                <td>عضو</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal-footer d-flex justify-content-left">
+                                <button type="button" class="btn btn-wide btn-primary" data-dismiss="modal">الغاء</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endblock content %}

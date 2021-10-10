@@ -1,0 +1,132 @@
+{% extends "cmt_layout.html" %} {% set title = 'فهرس الملفات' %} {% block content %}
+
+<div class="main-content legan" id="mainContent">
+    <div class="mtlg">
+        <div class="row mx-0">
+            <div class="col-12 mbmd">
+                <p class="title m-0">فهرس الملفات</p>
+            </div>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-10">
+                        <p class="sub-title">تحميل قالب</p>
+                        <div class="bordered scroll">
+                            <div class="geha-name">
+                                <ul class="gehat list-unstyled">
+                                    <li>
+                                        <input type="checkbox">
+                                        <i class="fas fa-folder-open"></i> اضافة افادة
+                                        <ul class="list-unstyled first-level">
+                                            <li class="has-children">
+                                                <i class="fas fa-folder-open"></i> اضافة بيانات الافادة
+                                            </li>
+                                            <li>
+                                                <input type="checkbox">
+                                                <i class="fas fa-folder-open"></i> مراجعة الافادة
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox">
+                                        <i class="fas fa-folder-open"></i> اضافة ملفات
+
+                                    </li>
+                                    <li>
+                                        <input type="checkbox">
+                                        <i class="fas fa-folder-open"></i> تحديد الجهات
+                                    </li>
+
+                                    <li>
+                                        <input type="checkbox">
+                                        <i class="fas fa-folder-open"></i> انشاء اجتماع
+                                    </li>
+
+                                    <li>
+                                        <input type="checkbox">
+                                        <i class="fas fa-folder-open"></i> اضافة افادة
+                                        <ul class="list-unstyled first-level">
+                                            <li class="has-children">
+                                                <i class="fas fa-folder-open"></i> اضافة بيانات الافادة
+                                            </li>
+                                            <li>
+                                                <input type="checkbox">
+                                                <i class="fas fa-folder-open"></i> مراجعة الافادة
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <input type="checkbox">
+                                        <i class="fas fa-folder-open"></i> اضافة افادة
+                                        <ul class="list-unstyled first-level">
+                                            <li class="has-children">
+                                                <i class="fas fa-folder-open"></i> اضافة بيانات الافادة
+                                            </li>
+                                            <li>
+                                                <input type="checkbox">
+                                                <i class="fas fa-folder-open"></i> مراجعة الافادة
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 p-0">
+                        <div class="row mx-0  mtmd d-flex align-items-center">
+                            <div class="col-5">
+                                <label for="" class="col-form-label">(DocCatalog)تحديد
+                                    كتالوج
+                                    الملف:</label>
+                                <div class="select-wrapper">
+                                    <select name="" class="form-control" id="">
+                                        <option>نموذج خطاب اللجنة
+                                        </option>
+                                        <option value="">تصنيف المراسلات
+                                        </option>
+                                        <option value="">تحضير و رفع المستندات
+                                        </option>
+                                        <option value="">بيانات الاجتماع
+                                        </option>
+                                        <option value="">ملفات اللجنة
+                                        </option>
+                                        <option value="">ملفات الاغلاق
+                                        </option>
+                                        <option value="">تسجيلات الاجتماع
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-5">
+                                <label for="" class="col-form-label">(DocTemplate)تحديد قالب
+                                    الملف:</label>
+                                <div class="select-wrapper">
+                                    <select name="" class="form-control" id="">
+                                        <option>11
+                                        </option>
+                                        <option value="">22
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-2">
+                                <a href="#">اضافة قالب جديد</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-10 text-left mtmd">
+                <button class="btn btn-primary btn-wide">تحميل القالب(download
+                    Template)</button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+{% endblock content %}

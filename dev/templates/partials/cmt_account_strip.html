@@ -1,0 +1,31 @@
+<section class="account-strip">
+    <div class="overlay">
+        <div class="container-fluid clearfix">
+            <div class="user-account">
+                مرحباً: أحمد - <a class="link" href="#">تسجيل الخروج</a>
+            </div>
+            <div class="global-search">
+                <input type="search" name="" class="search_input" placeholder="ابحث هنا...">
+                <a class="search-link"><i class="fas fa-search"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    var lightBtn = document.getElementById('changeToLight');
+    var darkBtn = document.getElementById('changeToDark');
+
+    var theme = localStorage.getItem('theme');
+
+    var overlay = document.getElementsByClassName('overlay')[0];
+
+    if (lightBtn && darkBtn) {
+        if (theme === null || theme === 'root') {
+
+            overlay.style.background = 'rgba(22, 25, 39, 0)';
+        } else if (theme === 'dark') {
+            overlay.style.background = 'rgba(22, 25, 39, 0.85)';
+        }
+    }
+</script>

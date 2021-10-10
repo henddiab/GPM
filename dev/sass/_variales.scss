@@ -1,0 +1,163 @@
+.root {
+    ////////////////////// color
+    --whiteColor: #ffffff;
+    --blackColor: #000000;
+    --backGround: #ffffff;
+    --lightBackGround: #FAFAFC;
+    --primaryColor: #0c66e1;
+    --mainNav: #0c66e1;
+    --formColorText: #0c66e1;
+    --darkPrimaryColor: #0A52B4;
+    --lightPrimaryColor: #5bb1f8;
+    --secondarycolor: #ffbd5b;
+    --tertiaryColor: #8ad000;
+    --accentColor: #7776bc;
+    --resetColor: #f44336;
+    --draftColor: #4682b4;
+    --orangeColor: #ff8200;
+    --yellowColor: #fbb040;
+    --yellow2Color: #f5fd81;
+    --greenColor: #6eed7a;
+    --lightGreenColor: #82c885;
+    --skyColor: #75a9f2;
+    --lightSkyColor: #96d2bb;
+    --redColor: #fa6565;
+    --stateColor: #ff0084;
+    --grayColor: #7f7f7f;
+    --successColor: #82C885;
+    --pinkColor: #fccece;
+    --evenColor: #fdfdfd;
+    --oddColor: #ffffff;
+    --other: #a7d4f8;
+    // graies
+    --lighterGrayColor: #f7f7f7;
+    --lightGrayColor: #bfbfbf;
+    --darkgray: #888888;
+    --darkergray: #444;
+    --borderColor: #e5e5e5;
+    --borderColor2: #75a9f2;
+    --borderColor3: #1abbad;
+    --textColor: #8d8d8d;
+    --warningColor: #FED872;
+    --alertColor: #2dbb1d;
+    --dangerColor: #ed9393;
+    --mutedColor: #c0c0c0;
+    --bgGray: #fafafa;
+    --invalid: #dc3545;
+    --disabled-input: #E9E9E9;
+    /////////////////// components colors....
+    --footerBgColor: #f2f2f2;
+    --tableHeaderColor: #e6edec;
+    --tableEvenColor: #fcf3f3;
+    --border-radius: 4px;
+    // buttons
+    --btnPrHover: #6da3ed;
+    --btnPrPress: #0a52b4;
+    --btnPrDisable: #bebebe;
+    // reverse
+    --btnPr-revHover: #e7f0fc;
+    --btnPr-revPress: #b6d1f6;
+    --btnPr-revDisable: #ffffff;
+    // gray
+    --btnGray: #E0EDFF;
+    --btnGray-Hover: #707070;
+    --btnGray-Press: #ffffff;
+    --btnGray-Disable: #ffffff;
+    ////////////////////// fonts
+    --primaryFont: "DIN Next LT Arabic";
+    --accentFont: tahoma;
+    // --lightFont   : ;
+    --semiBold: 500;
+    // --boldFont    : ;
+    --fontAwesome: "fontAwesome";
+    --mobile: 768px;
+}
+
+.dark {
+    ////////////////////// color
+    --whiteColor: #000000;
+    --blackColor: #ffffff;
+    --backGround: #161927;
+    --lightBackGround: #2F3242;
+    --primaryColor: #0c66e1;
+    --mainNav: #252836;
+    --formColorText: #ffffff;
+    --darkPrimaryColor: #0A52B4;
+    --lightPrimaryColor: #5bb1f8;
+    --secondarycolor: #ffbd5b;
+    --tertiaryColor: #8ad000;
+    --accentColor: #7776bc;
+    --resetColor: #f44336;
+    --draftColor: #4682b4;
+    --orangeColor: #ff8200;
+    --yellowColor: #fbb040;
+    --yellow2Color: #f5fd81;
+    --greenColor: #6eed7a;
+    --lightGreenColor: #82c885;
+    --skyColor: #75a9f2;
+    --lightSkyColor: #96d2bb;
+    --redColor: #fa6565;
+    --stateColor: #ff0084;
+    --grayColor: #7f7f7f;
+    --successColor: #82C885;
+    --pinkColor: #fccece;
+    --evenColor: #252836;
+    --oddColor: #252836;
+    --other: #a7d4f8;
+    // graies
+    --lighterGrayColor: #2F3242;
+    --lightGrayColor: #bfbfbf;
+    --darkgray: #888888;
+    --darkergray: #444;
+    --borderColor: #e5e5e5;
+    --borderColor2: #75a9f2;
+    --borderColor3: #1abbad;
+    --textColor: #CBCBCB;
+    --warningColor: #FED872;
+    --alertColor: #2dbb1d;
+    --dangerColor: #ed9393;
+    --mutedColor: #c0c0c0;
+    --bgGray: #252836;
+    --invalid: #dc3545;
+    --disabled-input: #808080;
+    /////////////////// components colors....
+    --footerBgColor: #f2f2f2;
+    --tableHeaderColor: #e6edec;
+    --tableEvenColor: #fcf3f3;
+    --border-radius: 4px;
+    // buttons
+    --btnPrHover: #6DA3ED;
+    --btnPrPress: #14243B;
+    --btnPrDisable: #323E4D;
+    // reverse
+    --btnPr-revHover: #6E91C4;
+    --btnPr-revPress: #204A85;
+    --btnPr-revDisable: #3F4564;
+    // gra
+    --btnGray: #142D4F;
+    --btnGray-Hover: #3F4564;
+    --btnGray-Press: #3A597D;
+    --btnGray-Disable: #2F3242;
+    ////////////////////// fonts
+    --primaryFont: "DIN Next LT Arabic";
+    --accentFont: tahoma;
+    // --lightFont   : ;
+    --semiBold: 500;
+    // --boldFont    : ;
+    --fontAwesome: "fontAwesome";
+    --mobile: 768px;
+}
+
+///////// mixins
+@mixin strip-box {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin cf {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

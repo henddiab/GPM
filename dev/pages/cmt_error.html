@@ -1,0 +1,48 @@
+{% extends "cmt_layout.html" %} {% set title = 'خطأ' %} {% block content %}
+
+<div class="main-content legan" id="mainContent">
+    <div class="container-fluid">
+
+        <div class="p_4040">
+
+            <img class="errorlogo" src="images/icons/Group1.png" alt="">
+            <h1> حدث خطأ 503</h1>
+
+            <div class="mtlg">
+                <p class="title">نحن لا نستطيع إيجاد الصفحة التي تبحث عنها</p>
+            </div>
+
+            <div class="links_404 mtlg">
+                <ul>
+                    <li><a href="./index.html">الصفحة الرئسية</a></li>
+                    <li><a href="./cmt_maham.html">المهام</a></li>
+                    <li><a href="./cmt_leggan.html">اللجان</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    var lightBtn = document.getElementById('changeToLight');
+    var darkBtn = document.getElementById('changeToDark');
+
+
+    var theme = localStorage.getItem('theme');
+
+    var errorlogo = document.getElementsByClassName('errorlogo')[0];
+
+    if (lightBtn && darkBtn) {
+        if (theme === null || theme === 'root') {
+            lightBtn.style.display = 'none';
+            darkBtn.style.display = 'block';
+            errorlogo.setAttribute('src', "images/icons/Group1.png")
+        } else if (theme === 'dark') {
+            lightBtn.style.display = 'block';
+            darkBtn.style.display = 'none'
+            errorlogo.setAttribute('src', "images/icons/Group2.png")
+        }
+    }
+</script>
+{% endblock content %}

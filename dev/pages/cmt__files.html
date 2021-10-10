@@ -1,0 +1,291 @@
+{% extends "cmt_layout.html" %} {% set title = 'المجلدات' %} {% block content %}
+<div class="main-content legan" id="mainContent">
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xs">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <div>
+                        <i class="far fa-trash-alt"></i>
+                    </div>
+                    <h2 class="title" id="exampleModalLabel">هل تريد ازالة العنصر؟</h2>
+                    <p>عند ازالة العنصر لا يمكن استعادته مرة اخري
+                    </p>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="button" class="btn btn-wide btn-primary" data-dismiss="modal">نعم</button>
+                    <button type="button" class="btn btn-wide btn-primary-reverse" data-dismiss="modal">لا</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mtlg">
+        <div class="row mx-0">
+            <div class="mtlg col-12">
+                <div class="row mx-0">
+                    <div class="col-12 p-0">
+                        <div id="add_mogalad">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="row  mx-0">
+                                        <div class="col-11">
+                                            <p class="sub-title m-0">
+                                                تحديد مسار المجلد
+                                            </p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="col-form-label">تحديد اللجنة
+                                            </p>
+                                            <div class="bordered scroll">
+                                                <div class="geha-name">
+                                                    <ul class="gehat list-unstyled">
+                                                        <li>
+                                                            <input type="checkbox">
+                                                            <i class="fas fa-folder-open"></i> لجنة هيئة خبراء
+                                                            <ul class="list-unstyled first-level">
+                                                                <li class="has-children">
+                                                                    <i class="fas fa-folder-open"></i> لجنة تطوير ابراج الرياض
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox">
+                                                                    <i class="fas fa-folder-open"></i> لجنة انشاء مترو الرياض
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox">
+                                                            <i class="fas fa-folder-open"></i> لجنة مجالس ومناطق
+
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox">
+                                                            <i class="fas fa-folder-open"></i> لجان اخري
+                                                        </li>
+
+                                                        <li>
+                                                            <input type="checkbox">
+                                                            <i class="fas fa-folder-open"></i> لجنة مجالس ومناطق
+                                                        </li>
+
+                                                        <li>
+                                                            <input type="checkbox">
+                                                            <i class="fas fa-folder-open"></i> لجنة هيئة خبراء
+                                                            <ul class="list-unstyled first-level">
+                                                                <li class="has-children">
+                                                                    <i class="fas fa-folder-open"></i> لجنة تطوير ابراج الرياض
+                                                                </li>
+                                                                <li>
+                                                                    <input type="checkbox">
+                                                                    <i class="fas fa-folder-open"></i> لجنة انشاء مترو الرياض
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6">
+                                            <p class="col-form-label">تحديد الموضوع
+                                            </p>
+                                            <div class="bordered scroll">
+                                                <div class="geha-name">
+                                                    <ul class="gehat list-unstyled">
+                                                        <li>
+                                                            <input type="checkbox">
+                                                            <i class="fas fa-folder-open"></i> الافادات
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox">
+                                                            <i class="fas fa-folder-open"></i> التكليفات
+
+                                                        </li>
+
+                                                        <li>
+                                                            <input type="checkbox">
+                                                            <i class="fas fa-folder-open"></i> الاجتماعات
+                                                            <ul class="list-unstyled first-level">
+                                                                <li class="has-children">
+                                                                    <i class="fas fa-folder-open"></i> اجتماع لجنة المناطق
+                                                                    <ul class="list-unstyled first-level">
+                                                                        <li class="has-children">
+                                                                            <i class="fas fa-folder-open"></i> مجلد1
+                                                                        </li>
+                                                                        <li>
+                                                                            <input type="checkbox">
+                                                                            <i class="fas fa-folder-open"></i> مجلد2
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-11 mtmd">
+                                            <p class="sub-title m-0">
+                                                بيانات المجلد
+                                            </p>
+                                        </div>
+                                        <div class="col-7">
+                                            <div><label for="" class="col-form-label">
+                                                    اسم المجلد:
+                                                    <span>*</span>
+                                                </label>
+                                            </div>
+
+                                            <input type="text" name="" class="form-control" placeholder="اسم المجلد">
+                                        </div>
+
+                                        <div class="col-3">
+                                            <div><label for="" class="col-form-label">
+                                                    المجلد الام:
+                                                    <span>*</span>
+                                                </label>
+                                            </div>
+
+                                            <div class="select-wrapper">
+                                                <select name="" class="form-control">
+                                                    <option>مجلد الام 1
+                                                    </option>
+                                                    <option>مجلد الام 2
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-10 mbmd">
+                                            <div><label for="" class="col-form-label">
+                                                    الوصف:
+                                                    <span>*</span>
+                                                </label>
+                                            </div>
+
+                                            <textarea placeholder="الوصف" name="" class="form-control" rows="2"></textarea>
+                                        </div>
+
+                                    </div>
+                                    <div class="row mx-0 ">
+                                        <div class="col-10">
+                                            <div class="d-flex justify-content-between mblg ">
+                                                <button class="btn btn-gray btn-wide close_mogalad">الغاء</button>
+                                                <button class="btn btn-primary btn-wide">اضافة</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 p-0">
+                        <div class="d-flex justify-content-between mbmd">
+                            <p class="title m-0">المجلدات</p>
+                            <div class="d-flex">
+                                <div class="Icon position-relative">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#657789" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search position-relative">
+                                        <circle cx="11" cy="11" r="8" />
+                                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                    </svg>
+                                    <input class="card__search_Input form-control" placeholder="ابحث هنا" />
+                                </div>
+                                <a class="btn btn-primary btn-wide add_mogalad mrmd" href="#add_mogalad">اضافة
+                                    مجلد جديد</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 p-0">
+                        <div class="table-responsive members">
+                            <table class="js-datatable table table-striped table-borderless table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>اسم المجلد</th>
+                                        <th>اسم اللجنة</th>
+                                        <th>المجلد الام</th>
+                                        <th>تحميل</th>
+                                        <th>تاريخ الانشاء</th>
+                                        <th>اجراءات</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>تحضير الاجتماع
+                                        </td>
+                                        <td>لجنة انشاء المرافق
+                                        </td>
+                                        <td>مجلد 1</td>
+                                        <td><a href="#">تحميل الملف</a>
+                                        </td>
+                                        <td>1441/8/23
+                                        </td>
+                                        <td>
+                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                <i class="far fa-trash-alt"></i>
+                                            </button>
+
+                                            <button>
+                                                <i class="far fa-edit"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>تحضير الاجتماع
+                                        </td>
+                                        <td>لجنة انشاء المرافق
+                                        </td>
+                                        <td>مجلد 1</td>
+                                        <td><a href="#">تحميل الملف</a>
+                                        </td>
+                                        <td>1441/8/23
+                                        </td>
+                                        <td>
+                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                <i class="far fa-trash-alt"></i>
+                                            </button>
+
+                                            <button>
+                                                <i class="far fa-edit"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>تحضير الاجتماع
+                                        </td>
+                                        <td>لجنة انشاء المرافق
+                                        </td>
+                                        <td>مجلد 1</td>
+                                        <td><a href="#">تحميل الملف</a>
+                                        </td>
+                                        <td>1441/8/23
+                                        </td>
+                                        <td>
+                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                <i class="far fa-trash-alt"></i>
+                                            </button>
+
+                                            <button>
+                                                <i class="far fa-edit"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock content %}

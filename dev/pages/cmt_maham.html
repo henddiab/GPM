@@ -1,0 +1,1287 @@
+{% extends "cmt_layout.html" %} {% set title = 'المهام' %} {% block content %}
+
+<div class="main-content legan" id="mainContent">
+    <div class="container-fluid">
+        <div class="ptsm">
+            <h1 class="title">المهام</h1>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="mtlg">
+
+            <div class="index-grid-box members-gehat-tabs">
+
+                <ul class="nav nav-tabs" id="membersGehatTabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="maham-tab11" data-toggle="tab" href="#maham_tab1" role="tab" aria-controls="members_tab" aria-selected="true">المهام</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="maham-tab31" data-toggle="tab" href="#maham_tab2" role="tab" aria-controls="gehat" aria-selected="false">المهام المفوضة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="maham-tab41" data-toggle="tab" href="#maham_tab3" role="tab" aria-controls="gehat" aria-selected="false">المهام المرفوضة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="maham-tab41" data-toggle="tab" href="#maham_tab4" role="tab" aria-controls="gehat" aria-selected="false">تعيين المهام</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="maham-tab51" data-toggle="tab" href="#maham_tab5" role="tab" aria-controls="gehat" aria-selected="false">مهام بدون عمل</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xs">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <div>
+                                        <i class="far fa-trash-alt"></i>
+                                    </div>
+                                    <h2 class="title" id="exampleModalLabel">هل تريد ازالة العنصر؟</h2>
+                                    <p>عند ازالة العنصر لا يمكن استعادته مرة اخري
+                                    </p>
+                                </div>
+                                <div class="modal-footer d-flex justify-content-center">
+                                    <button type="button" class="btn btn-wide btn-primary" data-dismiss="modal">نعم</button>
+                                    <button type="button" class="btn btn-wide btn-primary-reverse" data-dismiss="modal">لا</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade show active" id="maham_tab1" role="tabpanel">
+                        <div class="modal fade" id="delegate" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body scroll">
+                                        <div class="row mx-0">
+                                            <div class="col-12 mbmd p-0">
+                                                <p class="title">طلب تفويض مهمة</p>
+                                            </div>
+                                            <div class="col-12 ">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <p class="sub-title m-0">بيانات المفوض اليه</p>
+                                                        <div class="d-flex">
+                                                            <div class="w-50">
+                                                                <div><label for="" class="col-form-label">
+                                                                        مفوض الي:
+                                                                        <span class="required">*</span></label>
+                                                                </div>
+                                                                <div class="select-wrapper">
+                                                                    <select name="" class="form-control">
+                                                                        <option>محمد عمر
+                                                                        </option>
+                                                                        <option> احمد سليمان
+                                                                        </option>
+                                                                        <option>عبدالله فهد
+                                                                        </option>
+                                                                        <option>مصطفي محمود
+                                                                        </option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="w-25 mr-4">
+                                                                <div><label for="" class="col-form-label">
+                                                                        حالة المهمة:
+                                                                        <span>*</span>
+                                                                    </label>
+                                                                </div>
+
+                                                                <div class="d-flex mtsm">
+                                                                    <div class="ml-4"><input type="checkbox" name="state1" id="state1" class="styled-checkbox">
+
+                                                                        <label for="state1"></label>
+                                                                        <span>مهمة حالية</span>
+                                                                    </div>
+
+                                                                    <div><input type="checkbox" name="state2" id="state2" class="styled-checkbox">
+
+                                                                        <label for="state2"></label>
+                                                                        <span>مهمة مستقبيلة</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <p class="sub-title m-0">موعد التفويض</p>
+                                                        <div class="d-flex">
+                                                            <div class="w-50 ml-4">
+                                                                <div><label for="" class="col-form-label">
+                                                                        تاريخ البدء:
+                                                                        <span class="required">*</span></label>
+                                                                </div>
+                                                                <input type="text" class="form-control selector" readonly>
+                                                            </div>
+
+                                                            <div class="w-50">
+                                                                <div><label for="" class="col-form-label">
+                                                                        تاريخ الانتهاء:
+                                                                        <span class="required">*</span></label>
+                                                                </div>
+                                                                <input type="text" class="form-control selector" readonly>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <p class="sub-title m-0">ملاحظات</p>
+                                                        <div><label for="" class="col-form-label">
+                                                                ملاحظات:
+                                                                <span>*</span>
+                                                            </label>
+                                                        </div>
+
+                                                        <textarea placeholder="ملاحظات" name="" class="form-control" rows="3"></textarea>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <p class="sub-title m-0">اعدادات الاشعارات</p>
+                                                        <div><label for="" class="col-form-label">
+                                                                حفظ الاشعار اثناء التفويض:
+                                                                <span>*</span>
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="d-flex mtsm">
+                                                            <div class="ml-4"><input type="checkbox" name="state3" id="state3" class="styled-checkbox">
+
+                                                                <label for="state3"></label>
+                                                                <span>تنيه</span>
+                                                            </div>
+
+                                                            <div><input type="checkbox" name="state4" id="state4" class="styled-checkbox">
+
+                                                                <label for="state4"></label>
+                                                                <span>تصعيد</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                            <div class="col-12 text-left mtlg">
+                                                <button class="btn btn-gray btn-wide" data-dismiss="modal">الغاء</button>
+                                                <button class="btn btn-primary btn-wide">ارسال الي
+                                                    العضو</button>
+                                                <button class="btn btn-primary-reverse btn-wide">ارسال الي امين
+                                                    اللجنة</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="return" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body scroll">
+                                        <div class="row mx-0">
+                                            <div class="col-12 ">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <p class="sub-title m-0">ملاحظات</p>
+                                                        <div><label for="" class="col-form-label">
+                                                                ملاحظات:
+                                                                <span>*</span>
+                                                            </label>
+                                                        </div>
+
+                                                        <textarea placeholder="ملاحظات" name="" class="form-control" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-12 text-left mtlg">
+                                                <button class="btn btn-gray btn-wide" data-dismiss="modal">الغاء</button>
+                                                <button class="btn btn-primary btn-wide">ارسال الي العضو</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-flex justify-content-between">
+                                    <p class="title">المهام</p>
+                                    <div class="select-wrapper">
+                                        <select name="" class="form-control" id="">
+                                            <option>جميع المهام</option>
+                                            <option value="">مهام لجان</option>
+                                            <option value="">مهام اجتماعات</option>
+                                            <option value="">مهام تكليفات</option>
+                                            <option value="">مهام مشاريع</option>
+                                            <option value="">مهام افادات</option>
+                                            <option value="">مهام تقرير الاجتماعات</option>
+                                            <option value="">مهام ارفاق ملفات</option>
+                                            <option value="">مهام التعليقات</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="table-responsive">
+                                    <table class="js-datatable table table-striped table-borderless table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>اسم المهمة</th>
+                                                <th>اسم اللجنة</th>
+                                                <th>نوع المهمة</th>
+                                                <th>تاريخ البداية</th>
+                                                <th>تاريخ النهاية</th>
+                                                <th>اجراءات</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>إضافة اعضاء اللجنة</td>
+                                                <td>لجنة التحويل الوطني</td>
+                                                <td>مهام لجان</td>
+                                                <td>1441/5/25</td>
+                                                <td>1441/5/25</td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <a href="#" class="ml-4">تنفيذ</a>
+                                                        <a href="#" data-toggle="modal" data-target="#delegate" class="ml-4">تفويض</a>
+                                                        <a href="#" data-toggle="modal" data-target="#return">رفض</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>تحديث افادة عن حالة اللجنة
+                                                </td>
+                                                <td>لجنة تطوير كفاءة الاداء
+                                                </td>
+                                                <td>مهام افادات</td>
+                                                <td>1441/5/25</td>
+                                                <td>1441/5/25</td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <a href="#" class="ml-4">تنفيذ</a>
+                                                        <a href="#" data-toggle="modal" data-target="#delegate" class="ml-4">تفويض</a>
+                                                        <a href="#" data-toggle="modal" data-target="#return">رفض</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>تحديث افادة عن حالة اللجنة
+                                                </td>
+                                                <td>لجنة تطوير كفاءة الاداء
+                                                </td>
+                                                <td>مهام افادات</td>
+                                                <td>1441/5/25</td>
+                                                <td>1441/5/25</td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <a href="#" class="ml-4">تنفيذ</a>
+                                                        <a href="#" data-toggle="modal" data-target="#delegate" class="ml-4">تفويض</a>
+                                                        <a href="#" data-toggle="modal" data-target="#return">رفض</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="maham_tab2" role="tabpanel">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-flex justify-content-between">
+                                    <p class="title">المهام المفوضة</p>
+                                    <div class="select-wrapper">
+                                        <select name="" class="form-control" id="">
+                                            <option>جميع المهام</option>
+                                            <option value="">مهام لجان</option>
+                                            <option value="">مهام اجتماعات</option>
+                                            <option value="">مهام تكليفات</option>
+                                            <option value="">مهام مشاريع</option>
+                                            <option value="">مهام افادات</option>
+                                            <option value="">مهام تقرير الاجتماعات</option>
+                                            <option value="">مهام ارفاق ملفات</option>
+                                            <option value="">مهام التعليقات</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="table-responsive">
+                                    <table class="js-datatable table table-striped table-borderless table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>اسم المهمة</th>
+                                                <th>اسم اللجنة</th>
+                                                <th>نوع المهمة</th>
+                                                <th>تاريخ الطلب</th>
+                                                <th>مفوض الي</th>
+                                                <th>تاريخ الرد</th>
+                                                <th>حالة رد العضو</th>
+                                                <th>تفويض المهمة</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>إضافة اعضاء اللجنة</td>
+                                                <td>لجنة التحويل الوطني</td>
+                                                <td>مهام لجان</td>
+                                                <td>1441/5/25</td>
+                                                <td>قهد بكار</td>
+                                                <td>1441/5/25</td>
+                                                <td><span class="no-answer">لم يرد</span></td>
+                                                <td><span class="not-finished">قيد التفويض</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>تحديث افادة عن حالة اللجنة
+                                                </td>
+                                                <td>لجنة تطوير كفاءة الاداء
+                                                </td>
+                                                <td>مهام افادات</td>
+                                                <td>1441/5/25</td>
+                                                <td>قهد بكار</td>
+                                                <td>1441/5/25</td>
+                                                <td><span class="accept">لم يرد</span></td>
+                                                <td><span class="done">قيد التفويض</span></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>تحديث افادة عن حالة اللجنة
+                                                </td>
+                                                <td>لجنة تطوير كفاءة الاداء
+                                                </td>
+                                                <td>مهام افادات</td>
+                                                <td>1441/5/25</td>
+                                                <td>قهد بكار</td>
+                                                <td>1441/5/25</td>
+                                                <td><span class="no-accept">رفض</span></td>
+                                                <td><span class="redo">اعادة تفويض</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" delegate-data position-relative">
+                            <div class="row mx-0">
+                                <div class="col-12 p-0">
+                                    <div class="d-flex justify-content-between mbmd">
+                                        <p class="title">
+                                            بيانات طلب التفويض
+                                        </p>
+                                        <div class="icons">
+                                            <button data-toggle="modal" data-target="#staticBackdrop">
+                                                <i class="far fa-trash-alt"></i>
+                                            </button>
+                                            <button>
+                                                <i class="far fa-edit"></i>
+                                            </button>
+                                            <button>
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mx-0">
+                                <div class="col-12 d-flex pbsm">
+                                    <div class="w-90 px-3">
+                                        <label for="" class="col-form-label w-12">اسم اللجنة
+                                            :</label>
+                                        <span class="w-75">لجنة انشاء مترو الرياض وتطوير المرافق المحيطة</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 d-flex pbsm">
+                                    <div class="ml-4 w-45 bgGray px-3">
+                                        <label for="" class="col-form-label w-25">اسم الخطوة
+                                            :</label>
+                                        <span class="w-75">تعديل بيانات المشروع
+                                        </span>
+                                    </div>
+
+                                    <div class="ml-4 w-45 bgGray px-3">
+                                        <label for="" class="col-form-label w-25">اسم المهمة
+                                            :</label>
+                                        <span class="w-75">انشاء مشروع
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 d-flex pbsm">
+                                    <div class="ml-4 w-45 px-3">
+                                        <label for="" class="col-form-label w-25">نوع اللجنة
+                                            :</label>
+                                        <span class="w-75">لجنة وزارية
+                                        </span>
+                                    </div>
+
+                                    <div class="ml-4 w-45 px-3">
+                                        <label for="" class="col-form-label w-25">تاريخ الطلب
+                                            :</label>
+                                        <span class="w-75">1441/6/21
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 d-flex pbsm">
+                                    <div class="ml-4 w-45 px-3 bgGray">
+                                        <label for="" class="col-form-label w-25">تاريخ البداية
+                                            :</label>
+                                        <span class="w-75">1441/2/12
+                                        </span>
+                                    </div>
+
+                                    <div class="ml-4 w-45 px-3 bgGray">
+                                        <label for="" class="col-form-label w-25">مفوض الي
+                                            :</label>
+                                        <span class="w-75">إبراهيم سليمان
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 d-flex pbsm">
+                                    <div class="ml-4 w-45 px-3">
+                                        <label for="" class="col-form-label w-25">مفوض المهنة
+                                            :</label>
+                                        <span class="w-75">إبراهيم سليمان
+                                        </span>
+                                    </div>
+
+                                    <div class="ml-4 w-45 px-3">
+                                        <label for="" class="col-form-label w-25">تاريخ النهاية
+                                            :</label>
+                                        <span class="w-75">1441/2/12
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 mb-3 d-flex pbsm">
+                                    <div class="ml-4 w-45 px-3">
+                                        <label for="" class="col-form-label w-25">ملاحظات
+                                            :</label>
+                                        <span class="w-75">-
+                                        </span>
+                                    </div>
+
+                                    <div class="ml-4 w-45 px-3">
+                                        <label for="" class="col-form-label w-25">نوع المهمة
+                                            :</label>
+                                        <span class="w-75">مهام مشاريع
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 d-flex pbsm">
+                                    <div class="ml-4 w-45">
+                                        <p class="sub-title">
+                                            ملاحظات المفوض اليه
+                                        </p>
+                                        <div class="bgGray px-3">
+                                            <label for="" class="col-form-label w-25">تاريخ الرد
+                                                :</label>
+                                            <span class="w-75">11/4/1442
+                                            </span>
+                                        </div>
+
+                                        <div class="px-3">
+                                            <label for="" class="col-form-label w-25">حالة رد العضو
+                                                :</label>
+                                            <span class="w-75">رفض
+                                            </span>
+                                        </div>
+
+                                        <div class="bgGray px-3">
+                                            <label for="" class="col-form-label w-25">ملاحظات
+                                                :</label>
+                                            <span class="w-75">لا أكون متاح خلال هذه الفترة
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="ml-4 w-45">
+                                        <p class="sub-title">
+                                            ملاحظات امين اللجنة
+                                        </p>
+                                        <div class="bgGray px-3">
+                                            <label for="" class="col-form-label w-25">تاريخ الرد
+                                                :</label>
+                                            <span class="w-75">11/4/1442
+                                            </span>
+                                        </div>
+
+                                        <div class="px-3">
+                                            <label for="" class="col-form-label w-25">حالة رد امين اللجنة
+                                                :</label>
+                                            <span class="w-75">رفض
+                                            </span>
+                                        </div>
+
+                                        <div class="bgGray px-3">
+                                            <label for="" class="col-form-label w-25">ملاحظات
+                                                :</label>
+                                            <span class="w-75">لا أكون متاح خلال هذه الفترة
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="maham_tab3" role="tabpanel">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-flex justify-content-between">
+                                    <p class="title">المهام المرفوضة</p>
+                                    <div class="select-wrapper">
+                                        <select name="" class="form-control" id="">
+                                            <option>جميع المهام</option>
+                                            <option value="">مهام لجان</option>
+                                            <option value="">مهام اجتماعات</option>
+                                            <option value="">مهام تكليفات</option>
+                                            <option value="">مهام مشاريع</option>
+                                            <option value="">مهام افادات</option>
+                                            <option value="">مهام تقرير الاجتماعات</option>
+                                            <option value="">مهام ارفاق ملفات</option>
+                                            <option value="">مهام التعليقات</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="table-responsive">
+                                    <table class="js-datatable table table-striped table-borderless table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>اسم المهمة</th>
+                                                <th>اسم اللجنة</th>
+                                                <th>نوع المهمة</th>
+                                                <th>تاريخ الطلب</th>
+                                                <th>تاريخ الرد</th>
+                                                <th>حالة رد امين اللجنة</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>إضافة اعضاء اللجنة</td>
+                                                <td>لجنة التحويل الوطني</td>
+                                                <td>مهام لجان</td>
+                                                <td>1441/5/25</td>
+                                                <td>1441/5/25</td>
+                                                <td>
+                                                    <span class="no-answer">لم يرد</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>تحديث افادة عن حالة اللجنة
+                                                </td>
+                                                <td>لجنة تطوير كفاءة الاداء
+                                                </td>
+                                                <td>مهام افادات</td>
+                                                <td>1441/5/25</td>
+                                                <td>1441/5/25</td>
+                                                <td>
+                                                    <span class="accept">موافق</span>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>تحديث افادة عن حالة اللجنة
+                                                </td>
+                                                <td>لجنة تطوير كفاءة الاداء
+                                                </td>
+                                                <td>مهام افادات</td>
+                                                <td>1441/5/25</td>
+                                                <td>1441/5/25</td>
+                                                <td>
+                                                    <span class="no-accept">رفض</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class=" return-data position-relative">
+                                    <div class="row mx-0">
+                                        <div class="col-12 p-0">
+                                            <div class="d-flex justify-content-between mbmd">
+                                                <p class="title">
+                                                    بيانات طلب التفويض
+                                                </p>
+                                                <div class="icons">
+                                                    <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                    <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+                                                    <button>
+                                                        <i class="fas fa-times"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mx-0">
+                                        <div class="col-12 d-flex pbsm">
+                                            <div class="w-90 px-3">
+                                                <label for="" class="col-form-label w-12">اسم اللجنة
+                                                    :</label>
+                                                <span class="w-75">لجنة انشاء مترو الرياض وتطوير المرافق المحيطة</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 d-flex pbsm">
+                                            <div class="ml-4 w-45 bgGray px-3">
+                                                <label for="" class="col-form-label w-25">اسم المهمة
+                                                    :</label>
+                                                <span class="w-75">انشاء مشروع
+                                                </span>
+                                            </div>
+                                            <div class="ml-4 w-45 bgGray px-3">
+                                                <label for="" class="col-form-label w-25">نوع المهمة
+                                                    :</label>
+                                                <span class="w-75">مهام مشاريع
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 d-flex pbsm">
+                                            <div class="ml-4 w-45 px-3">
+                                                <label for="" class="col-form-label w-25">ملاحظات
+                                                    :</label>
+                                                <span class="w-75">-
+                                                </span>
+                                            </div>
+
+                                            <div class="ml-4 w-45 px-3">
+                                                <label for="" class="col-form-label w-25">تاريخ الطلب
+                                                    :</label>
+                                                <span class="w-75">1441/2/12
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 mb-3 d-flex pbsm">
+                                            <div class="ml-4 w-45">
+                                                <p class="sub-title">
+                                                    ملاحظات امين اللجنة
+                                                </p>
+                                                <div class="bgGray px-3">
+                                                    <label for="" class="col-form-label w-25">تاريخ الرد
+                                                        :</label>
+                                                    <span class="w-75">14/2/1442
+                                                    </span>
+                                                </div>
+
+                                                <div class="px-3">
+                                                    <label for="" class="col-form-label w-25">حالة رد امين اللجنة
+                                                        :</label>
+                                                    <span class="w-75">رفض
+                                                    </span>
+                                                </div>
+
+                                                <div class="bgGray px-3">
+                                                    <label for="" class="col-form-label w-25">ملاحظات
+                                                        :</label>
+                                                    <span class="w-75">هذا الغير غير مناسب لهذة المهمة
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="maham_tab4" role="tabpanel">
+                        <div class="modal fade" id="assign" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body scroll">
+                                        <div class="row mx-0">
+                                            <div class="col-12 ">
+                                                <div class="row">
+                                                    <div class="col-8">
+                                                        <div><label for="" class="col-form-label">
+                                                                اسم العضو:
+                                                                <span class="required">*</span></label>
+                                                        </div>
+                                                        <div class="select-wrapper">
+                                                            <select name="" class="form-control">
+                                                                <option>عمر سليمان
+                                                                </option>
+                                                                <option>عمر محمد
+                                                                </option>
+                                                                <option>مصطفي سليمان
+                                                                </option>
+                                                                <option>مصطفي اسماعيل
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <p class="sub-title m-0">ملاحظات</p>
+                                                        <div><label for="" class="col-form-label">
+                                                                ملاحظات:
+                                                                <span>*</span>
+                                                            </label>
+                                                        </div>
+
+                                                        <textarea placeholder="ملاحظات" name="" class="form-control" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-12 text-left mtlg">
+                                                <button class="btn btn-gray btn-wide">الغاء</button>
+                                                <button class="btn btn-primary-reverse btn-wide">ارسال الي امين
+                                                    اللجنة</button>
+                                                <button class="btn btn-primary btn-wide">تاكيد ارجاع المهمة</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="show-assign mblg" id="show-assign">
+                            <div class="row mx-0">
+                                <div class="col-12 text-left">
+                                    <button class="btn btn-primary btn-wide pressed">انشاء مهمة جديدة</button>
+                                </div>
+
+                                <div class="col-12 mbmd p-0">
+                                    <p class="title">انشاء مهمة جديدة</p>
+                                </div>
+
+                                <div class="col-9 ">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="sub-title m-0">تحديد اللجنة</p>
+                                            <div class="w-100">
+                                                <div><label for="" class="col-form-label">
+                                                        اختر اللجنة:
+                                                        <span class="required">*</span></label>
+                                                </div>
+                                                <div class="select-wrapper">
+                                                    <select name="" class="form-control">
+                                                        <option>لجان محلية
+                                                        </option>
+                                                        <option>لجان وزارية
+                                                        </option>
+                                                        <option>لجان برامج الرؤية
+                                                        </option>
+                                                        <option>لجان مجالس ومناطق
+                                                        </option>
+                                                        <option>لجان هيئة الخبراء
+                                                        </option>
+                                                        <option>لجان هيئة التطوير
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <p class="sub-title m-0">بيانات المهمة</p>
+                                            <div class="d-flex">
+                                                <div class="w-75 ml-4">
+                                                    <div><label for="" class="col-form-label">
+                                                            اسم المهمة:
+                                                            <span class="required">*</span></label>
+                                                    </div>
+                                                    <input type="text" name="" class="form-control" placeholder="إسم المهمة">
+                                                </div>
+
+                                                <div class="w-25">
+                                                    <div><label for="" class="col-form-label">
+                                                            مسئول المهمة:
+                                                            <span class="required">*</span></label>
+                                                    </div>
+                                                    <div class="select-wrapper">
+                                                        <select name="" class="form-control">
+                                                            <option>عمر سليمان
+                                                            </option>
+                                                            <option>عمر سليمان
+                                                            </option>
+                                                            <option>عمر محمد
+                                                            </option>
+                                                            <option>مصطفي سليمان
+                                                            </option>
+                                                            <option>مصطفي اسماعيل
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="w-100">
+                                                <div><label for="" class="col-form-label">
+                                                        وصف المهمة:
+                                                        <span class="required">*</span></label>
+                                                </div>
+                                                <textarea placeholder="وصف المهمة" name="" class="form-control" rows="3"></textarea>
+                                            </div>
+
+                                            <p class="sub-title m-0">تاريخ المهمة</p>
+                                            <div class="d-flex">
+                                                <div class="w-25 ml-4">
+                                                    <label for="" class="col-form-label">تاريخ
+                                                        تاريخ البدء :
+                                                    </label>
+                                                    <input type="text" class="form-control selector" readonly>
+                                                </div>
+
+                                                <div class="w-25">
+                                                    <label for="" class="col-form-label">تاريخ
+                                                        تاريخ الانتاهاء :
+                                                    </label>
+                                                    <input type="text" class="form-control selector" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mtmd">
+                                        <div class="col-12 generated-member d-flex">
+                                            <div class="w-12 d-flex align-items-baseline py-2 px-3 justify-content-between ml-3">
+                                                <span>ابراهيم سليمان</span>
+                                                <i class="fas fa-times"></i>
+                                            </div>
+
+                                            <div class="w-12 d-flex align-items-baseline py-2 px-3 justify-content-between ml-3">
+                                                <span>فهد سليمان</span>
+                                                <i class="fas fa-times"></i>
+                                            </div>
+
+                                            <div class="w-12 d-flex align-items-baseline py-2 px-3 justify-content-between ml-3">
+                                                <span>ابراهيم عبدالله</span>
+                                                <i class="fas fa-times"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-9 text-left mtlg">
+                                    <button class="btn btn-gray btn-wide close-assign">الغاء</button>
+                                    <button class="btn btn-primary btn-wide">ارسال الي العضو</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-flex justify-content-between align-items-baseline">
+                                    <p class="title">تعيين المهام</p>
+                                    <div class="d-flex align-items-baseline">
+
+                                        <div class="ml-4"><input type="checkbox" name="assigncheck" id="assigncheck" class="styled-checkbox">
+
+                                            <label for="assigncheck"></label>
+                                            <span>مهام بدون تعيين</span>
+                                        </div>
+
+                                        <div class="select-wrapper ml-4">
+                                            <select name="" class="form-control" id="">
+                                                <option>جميع الحالات</option>
+                                                <option value="">قيد الانشاء</option>
+                                                <option value="">لم تبدأ</option>
+                                                <option value="">قائمة</option>
+                                                <option value="">متوقفة</option>
+                                                <option value="">تم التأجيل</option>
+                                                <option value="">قيد الغلق</option>
+                                                <option value="">تم الاغلاق</option>
+                                                <option value="">تم الضم</option>
+                                                <option value="">ملغاة</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="select-wrapper">
+                                            <select name="" class="form-control" id="">
+                                                <option>جميع المهام</option>
+                                                <option value="">مهام لجان</option>
+                                                <option value="">مهام اجتماعات</option>
+                                                <option value="">مهام تكليفات</option>
+                                                <option value="">مهام مشاريع</option>
+                                                <option value="">مهام افادات</option>
+                                                <option value="">مهام تقرير الاجتماعات</option>
+                                                <option value="">مهام ارفاق ملفات</option>
+                                                <option value="">مهام التعليقات</option>
+                                            </select>
+                                        </div>
+
+                                        <a href="#show-assign" class="btn btn-primary btn-wide request-assign mrmd">
+                                            انشاء مهمة جديدة</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="table-responsive">
+                                    <table class="js-datatable table table-striped table-borderless table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>اسم المهمة</th>
+                                                <th>اسم اللجنة</th>
+                                                <th>نوع المهمة</th>
+                                                <th>تاريخ الطلب</th>
+                                                <th>العضو الموجه</th>
+                                                <th>حالة المهمة</th>
+                                                <th>حالة الرد</th>
+                                                <th>اجراءات</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>إضافة اعضاء اللجنة</td>
+                                                <td>لجنة التحويل الوطني</td>
+                                                <td>مهام لجان</td>
+                                                <td>1441/5/25</td>
+                                                <td>ابراهيم</td>
+                                                <td><span class="leg-status orange"></span>قيد الانشاء</td>
+                                                <td><span class="no-answer">لم يرد</span></td>
+                                                <td><a href="#" data-toggle="modal" data-target="#assign">تعيين
+                                                        المهمة</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>إضافة اعضاء اللجنة</td>
+                                                <td>لجنة التحويل الوطني</td>
+                                                <td>مهام لجان</td>
+                                                <td>1441/5/25</td>
+                                                <td>ابراهيم</td>
+                                                <td><span class="leg-status green"></span>اكتملت</td>
+                                                <td><span class="accept">موافق</span></td>
+                                                <td><a>تم التعيين</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>إضافة اعضاء اللجنة</td>
+                                                <td>لجنة التحويل الوطني</td>
+                                                <td>مهام لجان</td>
+                                                <td>1441/5/25</td>
+                                                <td>ابراهيم</td>
+                                                <td><span class="leg-status yellow"></span>لم تبدأ</td>
+                                                <td><span class="no-accept">رفض</span></td>
+                                                <td><a href="#" data-toggle="modal" data-target="#assign">تعيين
+                                                        المهمة</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" assign-data">
+                            <div class="row mx-0">
+                                <div class="col-12 p-0">
+                                    <div class="d-flex justify-content-between mbmd">
+                                        <p class="sub-title">
+                                            بيانات المهمة الموجهة
+                                        </p>
+                                        <div class="d-flex align-items-baseline">
+                                            <div class="bgGray py-2 px-4 ml-4">
+                                                <span class="leg-status yellow"></span>
+                                                <span>لم تبدأ</span>
+                                            </div>
+                                            <div class="icons">
+                                                <button data-toggle="modal" data-target="#staticBackdrop">
+                                                    <i class="far fa-trash-alt"></i>
+                                                </button>
+                                                <button>
+                                                    <i class="far fa-edit"></i>
+                                                </button>
+                                                <button>
+                                                    <i class="fas fa-times"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mx-0">
+                                <div class="col-12 d-flex pbsm">
+                                    <div class="w-90 px-3">
+                                        <label for="" class="col-form-label w-12">اسم اللجنة
+                                            :</label>
+                                        <span class="w-75">لجنة انشاء مترو الرياض وتطوير المرافق المحيطة</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 d-flex pbsm">
+                                    <div class="ml-4 w-45 bgGray px-3">
+                                        <label for="" class="col-form-label w-25">اسم المهمة
+                                            :</label>
+                                        <span class="w-75">تعديل بيانات المشروع
+                                        </span>
+                                    </div>
+
+                                    <div class="ml-4 w-45 bgGray px-3">
+                                        <label for="" class="col-form-label w-25">تاريخ الطلب
+                                            :</label>
+                                        <span class="w-75">11/4/1441
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 d-flex pbsm">
+                                    <div class="ml-4 w-45 px-3">
+                                        <label for="" class="col-form-label w-25">نوع اللجنة
+                                            :</label>
+                                        <span class="w-75">لجنة وزارية
+                                        </span>
+                                    </div>
+
+                                    <div class="ml-4 w-45 px-3">
+                                        <label for="" class="col-form-label w-25">تاريخ الطلب
+                                            :</label>
+                                        <span class="w-75">1441/6/21
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 d-flex pbsm">
+                                    <div class="ml-4 w-45 px-3 bgGray">
+                                        <label for="" class="col-form-label w-25">تاريخ البداية
+                                            :</label>
+                                        <span class="w-75">1441/2/12
+                                        </span>
+                                    </div>
+
+                                    <div class="ml-4 w-45 px-3 bgGray">
+                                        <label for="" class="col-form-label w-25">تاريخ النهاية
+                                            :</label>
+                                        <span class="w-75">1441/2/12
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 mb-3 d-flex pbsm">
+                                    <div class="ml-4 w-45 px-3">
+                                        <label for="" class="col-form-label w-25">ملاحظات
+                                            :</label>
+                                        <span class="w-75">-
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 pbsm">
+                                    <p class="sub-title">
+                                        ملاحظات العضو الموجه
+                                    </p>
+
+                                    <div class="d-flex">
+                                        <div class="ml-4 w-45">
+                                            <div class="bgGray px-3">
+                                                <label for="" class="col-form-label w-25">اسم العضو
+                                                    :</label>
+                                                <span class="w-75">ابراهيم سليمان
+                                                </span>
+                                            </div>
+
+                                            <div class="px-3">
+                                                <label for="" class="col-form-label w-25">حالة الرد
+                                                    :</label>
+                                                <span class="w-75">رفض
+                                                </span>
+                                            </div>
+
+                                            <div class="bgGray px-3">
+                                                <label for="" class="col-form-label w-25">ملاحظات
+                                                    :</label>
+                                                <span class="w-75">لا أكون متاح خلال هذه الفترة
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="ml-4 w-45">
+                                            <div class="bgGray px-3">
+                                                <label for="" class="col-form-label w-25">تاريخ الرد
+                                                    :</label>
+                                                <span class="w-75">11/4/1441
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 d-flex pbsm">
+                                    <div class="ml-4 w-45">
+                                        <p class="sub-title">
+                                            ملاحظات متخصص اللجنة
+                                        </p>
+                                        <div class="bgGray px-3">
+                                            <label for="" class="col-form-label w-25">ملاحظات
+                                                :</label>
+                                            <span class="w-75">لا أكون متاح خلال هذه الفترة
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="ml-4 w-45">
+                                        <p class="sub-title">
+                                            ملاحظات امين اللجنة
+                                        </p>
+                                        <div class="bgGray px-3">
+                                            <label for="" class="col-form-label w-25">ملاحظات
+                                                :</label>
+                                            <span class="w-75">لا أكون متاح خلال هذه الفترة
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="maham_tab5" role="tabpanel">
+                        <div class="modal fade" id="grasp" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body scroll">
+                                        <div class="row mx-0">
+                                            <div class="col-12 ">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <p class="sub-title m-0">ملاحظات</p>
+                                                        <div><label for="" class="col-form-label">
+                                                                ملاحظات:
+                                                                <span>*</span>
+                                                            </label>
+                                                        </div>
+
+                                                        <textarea placeholder="ملاحظات" name="" class="form-control" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-12 text-left mtlg">
+                                                <button class="btn btn-gray btn-wide" data-dismiss="modal">الغاء</button>
+                                                <button class="btn btn-primary btn-wide">إرسال إلى أمين اللجنة</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-flex justify-content-between">
+                                    <p class="title">مهام بدون عمل</p>
+                                    <div class="select-wrapper">
+                                        <select name="" class="form-control" id="">
+                                            <option>جميع المهام</option>
+                                            <option value="">مهام لجان</option>
+                                            <option value="">مهام اجتماعات</option>
+                                            <option value="">مهام تكليفات</option>
+                                            <option value="">مهام مشاريع</option>
+                                            <option value="">مهام افادات</option>
+                                            <option value="">مهام تقرير الاجتماعات</option>
+                                            <option value="">مهام ارفاق ملفات</option>
+                                            <option value="">مهام التعليقات</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="table-responsive">
+                                    <table class="js-datatable table table-striped table-borderless table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>اسم المهمة</th>
+                                                <th>اسم اللجنة</th>
+                                                <th>نوع المهمة</th>
+                                                <th>تاريخ البداية</th>
+                                                <th>تاريخ النهاية</th>
+                                                <th>اجراءات</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>إضافة اعضاء اللجنة</td>
+                                                <td>لجنة التحويل الوطني</td>
+                                                <td>مهام لجان</td>
+                                                <td>1441/5/25</td>
+                                                <td>1441/5/25</td>
+                                                <td>
+                                                    <a href="#" data-toggle="modal" data-target="#grasp">طلب تنفيذ</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>تحديث افادة عن حالة اللجنة
+                                                </td>
+                                                <td>لجنة تطوير كفاءة الاداء
+                                                </td>
+                                                <td>مهام افادات</td>
+                                                <td>1441/5/25</td>
+                                                <td>1441/5/25</td>
+                                                <td>
+                                                    <a href="#" data-toggle="modal" data-target="#grasp">طلب تنفيذ</a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>تحديث افادة عن حالة اللجنة
+                                                </td>
+                                                <td>لجنة تطوير كفاءة الاداء
+                                                </td>
+                                                <td>مهام افادات</td>
+                                                <td>1441/5/25</td>
+                                                <td>1441/5/25</td>
+                                                <td>
+                                                    <a href="#" data-toggle="modal" data-target="#grasp">طلب تنفيذ</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

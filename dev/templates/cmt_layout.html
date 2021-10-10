@@ -1,0 +1,67 @@
+<!doctype html>
+<html class="no-js" lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% if title %} {{ title }} {% else %} VRO {% endif %}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Place favicon.ico in the root directory -->
+    {% if devBuild %}
+    <link rel="stylesheet" href="css/style.css"> {% else %}
+    <link rel="stylesheet" href="css/style.min.css"> {% endif %}
+    <script>
+        (function(e, t, n) {
+            var r = e.querySelectorAll("html")[0];
+            r.className = r.className.replace(/(^|\s)no-js(\s|$)/, "$1js$2")
+        })(document, window, 0);
+
+        var doc = document.getElementsByTagName('html')[0];
+        var links = document.getElementsByTagName('link')[0];
+        var theme = localStorage.getItem('theme');
+        var lang = localStorage.getItem('lang');
+
+        if (theme !== null) {
+            doc.classList.add(theme);
+        } else if (theme === null) {
+            doc.classList.add('root');
+        }
+
+        if (lang === null || lang == 'ar') {
+            doc.setAttribute('dir', 'rtl');
+            links.setAttribute('href', 'css/style.css');
+        } else if (lang === 'en') {
+            doc.setAttribute('dir', 'ltr');
+            links.setAttribute('href', 'css/style-reverse.css');
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+
+        {% include 'partials/cmt_header.html' %} {% include 'partials/cmt_account_strip.html' %} {% block content %} {% endblock %} {% include 'partials/common_footer.html' %}
+
+        <div class="blocking_ui" id="blocking_ui" style="display: none;">
+            <div class="blocking_loading">
+                <img src="images/ajax-loader.gif" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    {% if devBuild %}
+    <script src="js/script.js"></script>
+    {% else %}
+    <script src="js/script.min.js"></script>
+    {% endif %}
+
+</body>
+
+</html>

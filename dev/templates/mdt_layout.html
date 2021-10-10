@@ -1,0 +1,58 @@
+<!doctype html>
+<html class="no-js" lang="ar" dir="rtl">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>{% if title %} {{ title }} {% else %} VRO {% endif %}</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<!-- Place favicon.ico in the root directory -->
+	{% if devBuild %}
+	<link rel="stylesheet" href="css/style.css">
+	{% else %}
+	<link rel="stylesheet" href="css/style.min.css">
+	{% endif %}
+	<script>
+	(function(e,t,n){var r=e.querySelectorAll("html")[0];r.className=r.className.replace(/(^|\s)no-js(\s|$)/,"$1js$2")})(document,window,0);
+	</script>
+	
+</head>
+<body>
+	<!--[if lte IE 9]>
+	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+	<![endif]-->
+
+	<div class="page-wrapper">
+
+		{% include 'partials/mdt_header.html' %}
+		{% include 'partials/mdt_account_strip.html' %}
+		{% block content %} {% endblock %}
+		{% include 'partials/common_footer.html' %}
+
+	
+
+		<div class="blocking_ui" id="blocking_ui" style="display: none;">
+			<div class="blocking_loading">
+				<img src="images/ajax-loader.gif" alt="">
+			</div>
+		</div>
+
+	</div>
+
+	
+	<!-- js -->
+   <script src="js/jquery-3.6.0.min.js"></script> 
+	{% if devBuild %}
+	<script src="js/script.js"></script>
+	{% else %}
+	<script src="js/script.min.js"></script>
+	{% endif %}
+	
+	<script>
+	  window.FontAwesomeConfig = {
+	    searchPseudoElements: true
+	  }
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,741 @@
+{% extends "cmt_layout.html" %} {% set title = 'الاشعارات' %} {% block content %}
+
+<div class="main-content legan" id="mainContent">
+    <div class="container-fluid">
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xs">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div>
+                            <i class="far fa-trash-alt"></i>
+                        </div>
+                        <h2 class="title" id="exampleModalLabel">هل تريد ازالة العنصر؟
+                        </h2>
+                        <p>عند ازالة العنصر لا يمكن استعادته مرة اخري
+                        </p>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button type="button" class="btn btn-wide btn-primary" data-dismiss="modal">نعم</button>
+                        <button type="button" class="btn btn-wide
+                    btn-primary-reverse" data-dismiss="modal">لا</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mtlg">
+            <div class="tklg-tabs tabs mtxs">
+                <!-- tabs links -->
+                <div class="index-grid-box">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#tab0" data-toggle="tab" role="tab" aria-selected="true">
+                                اعدادات الاشعارات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tab1" data-toggle="tab" role="tab">
+                                قوالب الاشعارات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tab2" data-toggle="tab" role="tab">
+                                معايير الاشعارات</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end links -->
+
+
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="tab0" role="tabpanel" aria-labelledby="tab1">
+                        <section class="section mtsm">
+                            <div class="row mx-0">
+                                <div class="col-9 px-5 ">
+                                    <div class="noti_data mbmd">
+                                        <p class="sub-title m-0">بيانات الاشعار</p>
+                                        <div class="w-100">
+                                            <label for="" class="col-form-label">
+                                                عنوان الاشعار:
+                                                <span>*</span></label>
+                                            <input type="text" name="" class="form-control" placeholder="عنوان الاشعار">
+                                        </div>
+
+                                        <div class="w-100 position-relative">
+                                            <label for="" class="col-form-label">
+                                                الوصف:
+                                                <span>*</span></label>
+                                            <textarea id="udescription" name="udescription" class="gre" rows="7"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="noti_path mbmd">
+                                        <p class="sub-title m-0">تحديد مسار الاشعار
+                                        </p>
+                                        <div class="d-flex">
+                                            <div class="w-50">
+                                                <label for="" class="col-form-label">
+                                                    تحديد النوع:
+                                                    <span>*</span></label>
+                                                <div class="select-wrapper
+                                            ml-3">
+                                                    <select name="" class="form-control">
+                                                        <option>لجنة
+                                                        </option>
+                                                        <option>تقرير اجتماع
+                                                        </option>
+                                                        <option>مشروع
+                                                        </option>
+                                                        <option>دراسة جدوي
+                                                        </option>
+                                                        <option>موضوع اجتماع
+                                                        </option>
+                                                        <option>تكليف
+                                                        </option>
+                                                        <option>مكتبة
+                                                        </option>
+                                                        <option>تعليق
+                                                        </option>
+                                                        <option>مهمة
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="w-50">
+                                                <label for="" class="col-form-label">
+                                                    تحديد العملية:
+                                                    <span>*</span></label>
+                                                <div class="select-wrapper
+                                            ml-3">
+                                                    <select name="" class="form-control">
+                                                        <option>انشاء الاجتماع
+                                                        </option>
+                                                        <option>دعوة اجتماع
+                                                        </option>
+                                                        <option>اغلاق الاجتماع
+                                                        </option>
+                                                        <option>انشاء لجنة
+                                                        </option>
+                                                        <option>اغلاق لجنة
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex">
+                                            <div class="w-50">
+                                                <label for="" class="col-form-label">
+                                                    تحديد الخطوة:
+                                                    <span>*</span></label>
+                                                <div class="select-wrapper
+                                            ml-3">
+                                                    <select name="" class="form-control">
+                                                        <option>اضافة موضوع
+                                                            اجتماع
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="w-50">
+                                                <label for="" class="col-form-label">
+                                                    حدث المهمة:
+                                                    <span>*</span></label>
+                                                <div class="select-wrapper
+                                            ml-3">
+                                                    <select name="" class="form-control">
+                                                        <option>تم البدء</option>
+                                                        <option>تم التفويض</option>
+                                                        <option>تم الانتهاء</option>
+                                                        <option>تم الارجاع</option>
+                                                        <option>تم القبول</option>
+                                                        <option>قبل ميعاد
+                                                            الانتهاء</option>
+                                                        <option>بعد ميعاد
+                                                            الانتهاء</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="noti_specification mbmd">
+                                        <p class="sub-title m-0">تخصيص الاشعار</p>
+                                        <div class="d-flex">
+                                            <div class="w-50">
+                                                <label for="" class="col-form-label">
+                                                    تحديد قالب الاشعار:
+                                                    <span>*</span></label>
+                                                <div class="select-wrapper
+                                            ml-3">
+                                                    <select name="" class="form-control">
+                                                        <option>اجتماع
+                                                        </option>
+                                                        <option>لجنة
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="w-50">
+                                                <label for="" class="col-form-label">
+                                                    تصنيف اللجنة:
+                                                    <span>*</span></label>
+                                                <div class="select-wrapper
+                                            ml-3">
+                                                    <select name="" class="form-control">
+                                                        <option>لجان دولية
+                                                        </option>
+                                                        <option>لجان محلية
+                                                        </option>
+                                                        <option>لجان داخلية توجيهية
+                                                        </option>
+                                                        <option>لجان داخلية تنفيذية
+                                                        </option>
+                                                        <option>مجلس الادارة
+                                                        </option>
+                                                        <option>لجان وزارية
+                                                        </option>
+                                                        <option>لجان مجالس ومناطق
+                                                        </option>
+                                                        <option>لجان هيئة الخبراء
+                                                        </option>
+                                                        <option>لجان برامج الرؤية
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex">
+                                            <div class="w-50">
+                                                <label for="" class="col-form-label">
+                                                    الاهمية:
+                                                    <span>*</span></label>
+                                                <div class="select-wrapper
+                                            ml-3">
+                                                    <select name="" class="form-control">
+                                                        <option>عادية
+                                                        </option>
+                                                        <option>عادية جدا
+                                                        </option>
+                                                        <option>هامة
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="w-50">
+                                                <label for="" class="col-form-label">
+                                                    الدرجة:
+                                                    <span>*</span></label>
+                                                <div class="select-wrapper
+                                            ml-3">
+                                                    <select name="" class="form-control">
+                                                        <option>
+                                                            درجة معالي
+                                                        </option>
+                                                        <option>
+                                                            درجة سمو
+                                                        </option>
+                                                        <option>
+                                                            درجة سعادة
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex">
+                                            <div class="w-50">
+                                                <label for="" class="col-form-label">
+                                                    ارسال الي TO:
+                                                    <span>*</span></label>
+                                                <div class="select-wrapper
+                                            ml-3">
+                                                    <select name="" class="form-control">
+                                                        <option>مدير اجتماع
+                                                        </option>
+                                                        <option>مالك عمل
+                                                        </option>
+                                                        <option>ممثل وزارة
+                                                        </option>
+                                                        <option>وكيل وزارة
+                                                        </option>
+                                                        <option>باحث قانوني
+                                                        </option>
+                                                        <option>مستشار معالي
+                                                            الوزير
+                                                        </option>
+                                                        <option>متخصص لجان
+                                                        </option>
+                                                        <option>جميع الادوار
+                                                            الممكنة
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="w-50">
+                                                <label for="" class="col-form-label">
+                                                    ارسال الي CC:
+                                                    <span>*</span></label>
+                                                <div class="select-wrapper
+                                            ml-3">
+                                                    <select name="" class="form-control">
+                                                        <option>مدير اجتماع
+                                                        </option>
+                                                        <option>مالك عمل
+                                                        </option>
+                                                        <option>ممثل وزارة
+                                                        </option>
+                                                        <option>وكيل وزارة
+                                                        </option>
+                                                        <option>باحث قانوني
+                                                        </option>
+                                                        <option>مستشار معالي
+                                                            الوزير
+                                                        </option>
+                                                        <option>متخصص لجان
+                                                        </option>
+                                                        <option>جميع الادوار
+                                                            الممكنة
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="noti_time mbmd">
+                                        <p class="sub-title m-0">تحديد توقيت الاشعار و طريقة الارسال</p>
+                                        <div class="d-flex">
+
+                                            <div class="w-50 ml-3">
+                                                <label for="" class="col-form-label">
+                                                    تحديد وقت بعد تاريخ المهمة
+                                                    (وقت
+                                                    التصعيد):
+                                                    <span>*</span></label>
+                                                <input type="text" name="" class="form-control" placeholder="Hour/s 12">
+                                            </div>
+
+                                            <div class="w-50">
+                                                <label for="" class="col-form-label">
+                                                    تحديد وقت قبل تاريخ المهمة
+                                                    (وقت
+                                                    التنبيه):
+                                                    <span>*</span></label>
+                                                <input type="text" name="" class="form-control" placeholder="Hour/s 24">
+                                            </div>
+                                        </div>
+
+                                        <div class="w-100">
+                                            <label for="" class="col-form-label">
+                                                ارسال عن طريق
+                                                <span>*</span></label>
+                                            <div class="d-flex">
+                                                <div class="d-flx mllg">
+                                                    <input type="checkbox" name="ch1" id="ch1" class="styled-checkbox">
+                                                    <label for="ch1"></label>
+                                                    <span>النظام</span>
+                                                </div>
+
+                                                <div class="d-flx mllg">
+                                                    <input type="checkbox" name="ch2" id="ch2" class="styled-checkbox">
+                                                    <label for="ch2"></label>
+                                                    <span>البريد الالكتروني</span>
+                                                </div>
+
+                                                <div class="d-flx">
+                                                    <input type="checkbox" name="ch3" id="ch3" class="styled-checkbox">
+                                                    <label for="ch3"></label>
+                                                    <span>الرسائل النصية</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-9 text-left p-0 mtlg px-5">
+                                    <button class="btn btn-primary btn-wide">الغاء
+                                        البيانات</button>
+                                    <button class="btn btn-gray btn-wide">ارسال</button>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="tab-pane fade" id="tab1" role="tabpanel" aria-labelledby="tab1">
+                        <section class="section mtsm">
+                            <div class="row">
+                                <div class="col-12 show-notification" id="show-notification">
+                                    <div class="text-left">
+                                        <button class="btn btn-primary pressed
+                                    btn-wide">اضافة قالب اشعار جديد</button>
+                                    </div>
+                                    <p class="title">
+                                        اضافة قالب اشعار جديد
+                                    </p>
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <div class=" px-5 ">
+                                                <div class="w-100">
+                                                    <label for="" class="col-form-label">
+                                                        عنوان قالب الاشعار:
+                                                        <span>*</span></label>
+                                                    <input type="text" name="" class="form-control" placeholder="عنوان قالب الاشعار">
+                                                </div>
+
+                                                <div class="d-flex">
+                                                    <div class="w-50 ml-3">
+                                                        <label for="" class="col-form-label">
+                                                            النوع:
+                                                            <span>*</span></label>
+                                                        <div class="select-wrapper">
+                                                            <select name="" class="form-control">
+                                                                <option> اجتماع
+                                                                </option>
+
+                                                                <option> لجنة
+                                                                </option>
+
+                                                                <option> افادة
+                                                                </option>
+
+                                                                <option> تكليف
+                                                                </option>
+
+                                                                <option> مشروع
+                                                                </option>
+
+                                                                <option> دراسة جدوي
+                                                                </option>
+
+                                                                <option> تصويت
+                                                                </option>
+
+                                                                <option> قرار
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="w-50">
+                                                        <label for="" class="col-form-label">
+                                                            مسار القالب:
+                                                            <span>*</span></label>
+                                                        <input type="text" name="" class="form-control" placeholder="مسار القالب">
+                                                    </div>
+                                                </div>
+
+                                                <div class="w-100 position-relative">
+                                                    <label for="" class="col-form-label">
+                                                        الوصف:
+                                                        <span>*</span></label>
+                                                    <textarea id="udescription2" name="udescription" class="gre" rows="7"></textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="text-left mtlg mblg px-5">
+                                                <button class="btn btn-gray
+                                            btn-wide
+                                            close-notification">الغاء</button>
+                                                <button class="btn btn-primary
+                                            btn-wide">حفظ</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="d-flex justify-content-between
+                                mbmd">
+                                        <p class="sub-title m-0">
+                                            قوالب الاشعارات
+                                        </p>
+                                        <a href="#show-notification" class="btn
+                                    btn-primary
+                                    btn-wide add-notification">اضافة
+                                            قالب اشعار جديد</a>
+                                    </div>
+                                    <div class="table-responsive members">
+                                        <table class="js-datatable table
+                                    table-striped table-borderless
+                                    table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th class="w-33">عنوان القالب
+                                                    </th>
+                                                    <th class="w-33">الوصف</th>
+                                                    <th>النوع</th>
+                                                    <th>تاريخ الانشاء</th>
+                                                    <th>اجراءات</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>الانشاء
+                                                    </td>
+                                                    <td>-</td>
+                                                    <td>لجنة
+                                                    </td>
+                                                    <td>1441/8/23
+                                                    </td>
+                                                    <td>
+                                                        <button data-toggle="modal" data-target="#staticBackdrop">
+                                                            <i class="far
+                                                        fa-trash-alt"></i>
+                                                        </button>
+
+                                                        <button>
+                                                            <i class="far
+                                                        fa-edit"></i>
+                                                        </button>
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>الانشاء
+                                                    </td>
+                                                    <td>-</td>
+                                                    <td>لجنة
+                                                    </td>
+                                                    <td>1441/8/23
+                                                    </td>
+                                                    <td>
+                                                        <button data-toggle="modal" data-target="#staticBackdrop">
+                                                            <i class="far
+                                                        fa-trash-alt"></i>
+                                                        </button>
+
+                                                        <button>
+                                                            <i class="far
+                                                        fa-edit"></i>
+                                                        </button>
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>الانشاء
+                                                    </td>
+                                                    <td>-</td>
+                                                    <td>لجنة
+                                                    </td>
+                                                    <td>1441/8/23
+                                                    </td>
+                                                    <td>
+                                                        <button data-toggle="modal" data-target="#staticBackdrop">
+                                                            <i class="far
+                                                        fa-trash-alt"></i>
+                                                        </button>
+
+                                                        <button>
+                                                            <i class="far
+                                                        fa-edit"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab1">
+                        <section class="section mtsm">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="table-responsive members">
+                                        <table class="js-datatable table table-striped table-borderless table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th class="w-50">تصنيف اللجنة</th>
+                                                    <th>الاهمية</th>
+                                                    <th>الدرجة</th>
+                                                    <th>اجراءات</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>لجان دولية</td>
+                                                    <td>
+                                                        <div class="select-wrapper">
+                                                            <select name="" class="form-control bg-transparent border-0" id="">
+                                                                <option>عادية
+                                                                </option>
+                                                                <option>هامة
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="select-wrapper">
+                                                            <select name="" class="form-control bg-transparent border-0" id="">
+                                                                <option>درجة معالي
+                                                                </option>
+                                                                <option>درجة عادية
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td> <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                        <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>لجان دولية</td>
+                                                    <td>
+                                                        <div class="select-wrapper">
+                                                            <select name="" class="form-control bg-transparent border-0" id="">
+                                                                <option>عادية
+                                                                </option>
+                                                                <option>هامة
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="select-wrapper">
+                                                            <select name="" class="form-control bg-transparent border-0" id="">
+                                                                <option>درجة معالي
+                                                                </option>
+                                                                <option>درجة سمو
+                                                                </option>
+                                                                <option>درجة سعادة
+                                                                </option>
+                                                                <option>درجة عادية
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td> <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                        <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>لجان دولية</td>
+                                                    <td>
+                                                        <div class="select-wrapper">
+                                                            <select name="" class="form-control bg-transparent border-0" id="">
+                                                                <option>عادية
+                                                                </option>
+                                                                <option>هامة
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="select-wrapper">
+                                                            <select name="" class="form-control bg-transparent border-0" id="">
+                                                                <option>درجة معالي
+                                                                </option>
+                                                                <option>درجة سمو
+                                                                </option>
+                                                                <option>درجة سعادة
+                                                                </option>
+                                                                <option>درجة عادية
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td> <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                        <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>لجان دولية</td>
+                                                    <td>
+                                                        <div class="select-wrapper">
+                                                            <select name="" class="form-control bg-transparent border-0" id="">
+                                                                <option>عادية
+                                                                </option>
+                                                                <option>هامة
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="select-wrapper">
+                                                            <select name="" class="form-control bg-transparent border-0" id="">
+                                                                <option>درجة معالي
+                                                                </option>
+                                                                <option>درجة سمو
+                                                                </option>
+                                                                <option>درجة سعادة
+                                                                </option>
+                                                                <option>درجة عادية
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td> <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                        <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>لجان دولية</td>
+                                                    <td>
+                                                        <div class="select-wrapper">
+                                                            <select name="" class="form-control bg-transparent border-0" id="">
+                                                                <option>عادية
+                                                                </option>
+                                                                <option>هامة
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="select-wrapper">
+                                                            <select name="" class="form-control bg-transparent border-0" id="">
+                                                                <option>درجة معالي
+                                                                </option>
+                                                                <option>درجة سمو
+                                                                </option>
+                                                                <option>درجة سعادة
+                                                                </option>
+                                                                <option>درجة عادية
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td> <button data-toggle="modal" data-target="#staticBackdrop">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                        <button>
+                                                        <i class="far fa-edit"></i>
+                                                    </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

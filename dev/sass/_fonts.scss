@@ -1,0 +1,22 @@
+// regular
+@font-face {
+	font-family: 'DIN Next LT Arabic';
+	src: url('../fonts/dinNextLt-regular/DINNextLTArabic-Regular.eot');
+	src: url('../fonts/dinNextLt-regular/DINNextLTArabic-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/dinNextLt-regular/DINNextLTArabic-Regular.woff') format('woff'),
+		url('../fonts/dinNextLt-regular/DINNextLTArabic-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+// medium
+@font-face {
+	font-family: 'DIN Next LT Arabic';
+	src: url('../fonts/dinNextLt-medium/DINNextLTArabic-Medium.eot');
+	src: url('../fonts/dinNextLt-medium/DINNextLTArabic-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/dinNextLt-medium/DINNextLTArabic-Medium.woff') format('woff'),
+		url('../fonts/dinNextLt-medium/DINNextLTArabic-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
